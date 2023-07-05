@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git Basic | pfcs</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="progit - git basic">
+    <meta name="author" content="pfcs">
+    
+    <link rel="preload" href="/assets/css/0.styles.1d448ed8.css" as="style"><link rel="preload" href="/assets/js/app.7ac337ed.js" as="script"><link rel="preload" href="/assets/js/9.a3b91e3f.js" as="script"><link rel="preload" href="/assets/js/4.2a0927de.js" as="script"><link rel="preload" href="/assets/js/8.35d19e95.js" as="script"><link rel="prefetch" href="/assets/js/10.37cf788a.js"><link rel="prefetch" href="/assets/js/11.6fbdc316.js"><link rel="prefetch" href="/assets/js/12.6b1664a7.js"><link rel="prefetch" href="/assets/js/13.0b1efab5.js"><link rel="prefetch" href="/assets/js/14.c36186e5.js"><link rel="prefetch" href="/assets/js/15.bac1192b.js"><link rel="prefetch" href="/assets/js/16.34e70c15.js"><link rel="prefetch" href="/assets/js/17.028c14d5.js"><link rel="prefetch" href="/assets/js/18.36dc5cdd.js"><link rel="prefetch" href="/assets/js/19.e0b44f6b.js"><link rel="prefetch" href="/assets/js/20.daa610d1.js"><link rel="prefetch" href="/assets/js/3.e899b7d9.js"><link rel="prefetch" href="/assets/js/5.32e602e2.js"><link rel="prefetch" href="/assets/js/6.155b7c80.js"><link rel="prefetch" href="/assets/js/7.d9498d3c.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.2f9b64f2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1d448ed8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><img src="/images/pfcs-logos/logo.png" alt="logo" class="logo"> <a href="/" class="nav-link home-link">pfcs </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/posts/" class="nav-link">Posts</a></li><li class="nav-item"><a href="/projects/" class="nav-link">Projects</a></li><li class="nav-item"><a href="/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">pfcs </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/posts/" class="nav-link">Posts</a></li><li class="mobile-nav-item"><a href="/projects/" class="nav-link">Projects</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">Tags</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        Git Basic
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">pfcs</span> <span itemprop="address">   in Beijing</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2023-04-12T00:00:00.000Z">
+      2023-04-12
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/Git" data-v-42ccfcd5><span data-v-42ccfcd5>Git</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><blockquote><p>After read this chapter, you can do all the basic local Git operations—creating or cloning a repo, making changes, staging and committing changes, viewing the history of all changes, working with remote and so on.</p></blockquote> <h1 id="create-a-git-repository"><a href="#create-a-git-repository" class="header-anchor">#</a> Create a Git Repository</h1> <p>Tow way, end up with <strong>a Git repository on your local machine</strong>, ready for work</p> <h2 id="from-a-local-directory"><a href="#from-a-local-directory" class="header-anchor">#</a> From a local directory</h2> <ul><li>You can take a <strong>local directory</strong> that is currently not under version control, and <strong>turn it into a Git repository</strong></li> <li>流程
+<ul><li>First , go to that project’s directory</li> <li>Then type command  <code>git init</code> <ul><li>Will creates a new <strong>subdirectory</strong> named <strong>.git</strong> that contains all of your <strong>necessary repository files</strong>(Git repository skeleton)</li></ul></li></ul></li> <li>E. do a initial commit</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">git</span> <span class="token function">add</span> *.c 
+<span class="token function">git</span> <span class="token function">add</span> LICENSE 
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">'Initial project version'</span>
+</code></pre></div><h2 id="clone"><a href="#clone" class="header-anchor">#</a> clone</h2> <ul><li>get a copy of an <strong>existing Git repository</strong> <ul><li>Git receives <strong>a full copy of nearly all data</strong> that the server has.
+<ul><li>By default, <strong>Every version</strong> of every file for the history of the project is pulled down.</li></ul></li></ul></li> <li>COMMAND：<code>git clone &lt;url&gt;</code> <ul><li>除了HTTP，还可以使用其他transfer protocol，如SSH</li></ul></li> <li>E.  <code>git clone https://github.com/libgit2/libgit2</code> <ul><li>That <strong>creates a directory</strong> named <strong>libgit2</strong>, <strong>initializes a .git directory</strong> inside it, pulls down <strong>all the data</strong> for that repository, and checks out <strong>a working copy of the latest version</strong></li> <li><strong>Rename directory</strong>: specify the new directory <strong>name</strong> as an additional <strong>argument</strong> <ul><li><code>$ git clone https://github.com/libgit2/libgit2 mylibgit</code></li></ul></li></ul></li></ul> <h1 id="recording-changes"><a href="#recording-changes" class="header-anchor">#</a> Recording Changes</h1> <h2 id="tracked-file"><a href="#tracked-file" class="header-anchor">#</a> Tracked File</h2> <p>files that <strong>Git knows about</strong>（yet，Git can see the untracked files in your work directory)</p> <ul><li>newly staged files / (already) in the last snapshot
+<img src="/assets/img/Pasted-image-20230329214445.3563bfe3.png" alt=""></li></ul> <h2 id="check-the-status"><a href="#check-the-status" class="header-anchor">#</a> Check the Status</h2> <ul><li><p>COMMAND：<code>git status</code></p> <ul><li>show info:
+<ul><li>which branch you are</li> <li>compare with the latest same branch with server</li> <li>Untracked files</li> <li>Changes to be committed
+<ul><li>file in the <strong>stage area</strong></li></ul></li> <li>Changes not staged for commit
+<ul><li>already <strong>tracked and modified</strong> file, but not be staged</li></ul></li></ul></li> <li>E.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> status 
+On branch master 
+Your branch is up-to-date with <span class="token string">'origin/master'</span><span class="token builtin class-name">.</span> 
+Changes to be committed: 
+<span class="token punctuation">(</span>use <span class="token string">&quot;git restore --staged ...&quot;</span> to unstage<span class="token punctuation">)</span>   
+
+new file: README
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> status 
+On branch master 
+Your branch is up-to-date with <span class="token string">'origin/master'</span><span class="token builtin class-name">.</span> 
+Changes to be committed:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git reset HEAD ...&quot;</span> to unstage<span class="token punctuation">)</span>   
+
+new file: README 
+
+Changes not staged <span class="token keyword">for</span> commit:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git add ...&quot;</span> to update what will be committed<span class="token punctuation">)</span>   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git checkout -- ...&quot;</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>  
+
+modified: CONTRIBUTING.md
+</code></pre></div></li> <li><p>COMMAND: <code>git add</code></p> <ul><li>multipurpose, tow Func.
+<ul><li>track <strong>new file</strong> &amp; stage it</li> <li>stage the <strong>tracked &amp; modified</strong> file</li></ul></li> <li>think of it more as “<strong>add</strong> <strong>precisely</strong> this content <strong>to the next commit</strong>&quot;</li> <li>可以跟文件夹名作为参数，会add该目录下所有文件</li></ul></li> <li><p>check <strong>short status</strong></p> <ul><li>COMMADN: <code>git status -s</code> (or <code>--short</code>)
+<ul><li>get a more simplified output</li> <li>two column
+<ul><li>left: the status of the staging area
+<ul><li><code>??</code>: untracked</li> <li><code>A</code>: staged</li> <li><code>M</code>: modified</li> <li><code>MM</code>: modified again after staged</li></ul></li> <li>right: the status of the working tree</li></ul></li></ul></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> status <span class="token parameter variable">-s</span>  
+M README 
+MM Rakefile
+A lib/git.rb
+M lib/simplegit.rb 
+?? LICENSE.txt	
+</code></pre></div></li></ul> <h2 id="ignoring-files"><a href="#ignoring-files" class="header-anchor">#</a> Ignoring Files</h2> <ul><li>Deal with: files that you don’t want Git to automatically add or even show you as being untracked</li> <li>create a file named： <code>.gitignore</code> <ul><li>list the <strong>patterns</strong> to <strong>match the filename</strong> you want to ignore</li> <li>RULES:
+<ul><li>Standard <strong>glob patterns</strong> work
+<ul><li>and will be applied recursively throughout the entire working tree.</li></ul></li> <li><code>#</code> ：注释</li> <li>You can <code>start</code> patterns with a <code>/</code> to avoid recursivity.</li> <li>You can <code>end</code> patterns with a <code>/</code> to specify a directory.</li> <li>You can negate a pattern by starting it with <code>!</code></li></ul></li> <li>additional <code>.gitignore</code> files in subdirectories
+<ul><li>apply only to the files under the directory where they are located</li></ul></li></ul></li></ul> <h2 id="view-detailed-changes"><a href="#view-detailed-changes" class="header-anchor">#</a> View Detailed Changes</h2> <ul><li><p>COMMADN: <code>git diff</code></p> <ul><li>compares your <strong>working directory</strong> with your <strong>staging area</strong></li> <li>then tells you the changes you’ve made that you <strong>haven’t yet staged.</strong></li> <li>E.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> <span class="token function">diff</span> 
+<span class="token function">diff</span> <span class="token parameter variable">--git</span> 
+a/CONTRIBUTING.md b/CONTRIBUTING.md 
+index 8ebb991<span class="token punctuation">..</span>643e24f <span class="token number">100644</span> 
+--- a/CONTRIBUTING.md 
++++ b/CONTRIBUTING.md
+@@ -65,7 +65,8 @@ branch directly, things can get messy.  
+Please include a <span class="token function">nice</span> description of your changes when you submit your PR<span class="token punctuation">;</span>  
+<span class="token keyword">if</span> we have to <span class="token builtin class-name">read</span> the whole <span class="token function">diff</span> to figure out why you<span class="token string">'re contributing  in the first place, you'</span>re <span class="token function">less</span> likely to get feedback and have your change 
+<span class="token parameter variable">-merged</span> in. 
++merged in. Also, <span class="token function">split</span> your changes into comprehensive chunks <span class="token keyword">if</span> your patch is 
++longer than a dozen lines.	
+</code></pre></div></li> <li><p><code>--staged</code> / <code>--cached</code></p> <ul><li>compares your <strong>staged changes</strong> to your <strong>last commit</strong>, See what you have staged so far</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token parameter variable">--staged</span> 
+<span class="token function">diff</span> <span class="token parameter variable">--git</span> a/README b/README 
+new <span class="token function">file</span> mode <span class="token number">100644</span> index 0000000<span class="token punctuation">..</span>03902a1 
+--- /dev/null 
++++ b/README 
+@@ -0,0 +1 @@ 
++My Project
+</code></pre></div></li> <li><p><code>git difftool</code> : other ways</p></li></ul> <h2 id="commtting-changes"><a href="#commtting-changes" class="header-anchor">#</a> Commtting Changes</h2> <ul><li><p>COMMAND: <code>git commit</code></p> <ul><li>Doing so <strong>launches your editor</strong> of choice, to edit your commit message
+<ul><li>When you exit the editor, Git creates your commit <strong>with that commit message</strong> <ul><li><ul><li>the <code>#</code> ( comments and diff) stripped out</li></ul></li></ul></li> <li>自带注释信息：the latest output of the <code>git status</code> command
+<ul><li><code>-v</code>: puts the diff of your change</li></ul></li></ul></li> <li>output
+<ul><li>which branch you committed to + SHA-1 checksum</li> <li>how many files were changed</li> <li>statistics about lines added and removed in the commit</li></ul></li></ul></li> <li><p><code>-m</code> ：type your commit message <strong>inline</strong></p></li> <li><p><code>-a</code>: skipping the staging area</p> <ul><li>Git will automatically <strong>stage every file</strong> that is already <strong>tracked</strong> before doing the commit</li></ul></li></ul> <h2 id="removing-file"><a href="#removing-file" class="header-anchor">#</a> Removing File</h2> <ul><li>COMMAND: <code>git rm</code> <ul><li>remove a file from Git = remove it from <strong>staging</strong> area + <strong>commit</strong> <ul><li>also remove the file from your <strong>working directory</strong></li></ul></li> <li>The next time you commit, the file will <strong>be gone</strong> and <strong>no longer tracked</strong></li> <li>You can pass <strong>files, directories, and file-glob patterns</strong> to the git rm command</li> <li>NOTE: 如果你直接将文件从working directory删除，state会显示如下<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">rm</span> PROJECTS.md 
+$ <span class="token function">git</span> status 
+On branch master Your branch is up-to-date with <span class="token string">'origin/master'</span><span class="token builtin class-name">.</span> 
+Changes not staged <span class="token keyword">for</span> commit:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git add/rm ...&quot;</span> to update what will be committed<span class="token punctuation">)</span>   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git checkout -- ...&quot;</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>   
+deleted: PROJECTS.md 
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">&quot;git add&quot;</span> and/or <span class="token string">&quot;git commit -a&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>然后，再执行 <code>git rm</code> 便可完成remove</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> <span class="token function">rm</span> PROJECTS.md 
+<span class="token function">rm</span> <span class="token string">'PROJECTS.md'</span> 
+$ <span class="token function">git</span> status 
+On branch master 
+Your branch is up-to-date with <span class="token string">'origin/master'</span><span class="token builtin class-name">.</span> 
+Changes to be committed:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git reset HEAD ...&quot;</span> to unstage<span class="token punctuation">)</span>   
+deleted: PROJECTS.md
+</code></pre></div></li></ul></li> <li><code>-f</code> <ul><li>If you <strong>modified</strong> the file or had already <strong>added</strong> it to the staging area, you have to <code>-f</code> to force the removal</li> <li>This is a <strong>safety feature</strong> to prevent accidental removal of data that hasn’t yet been recorded in a snapshot and that can’t be recovered from Git.</li></ul></li> <li><code>--cached</code> <ul><li><strong>keep</strong> the file in your <strong>working tree</strong>, but <strong>remove</strong> it from your <strong>staging area</strong>(not have Git track it anymore)</li></ul></li></ul> <h2 id="moving-file"><a href="#moving-file" class="header-anchor">#</a> Moving File</h2> <ul><li>Git doesn’t explicitly track file movement
+<ul><li>Yet Git is pretty smart about figuring that out after the fact</li></ul></li> <li>COMMAND：<code>git mv</code> <ul><li>can be used to rename a file</li> <li>E.<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> <span class="token function">mv</span> README.md README 
+$ <span class="token function">git</span> status 
+On branch master 
+Your branch is up-to-date with <span class="token string">'origin/master'</span><span class="token builtin class-name">.</span> 
+Changes to be committed:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git reset HEAD ...&quot;</span> to unstage<span class="token punctuation">)</span>   
+renamed: README.md -<span class="token operator">&gt;</span> README
+</code></pre></div><ul><li>As you can see, Git considers it a renamed file</li> <li>Equivalent to:
+<ul><li>you can use any tool you like to rename a file, and address the add/rm later, before you commit</li></ul></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>	$ <span class="token function">mv</span> README.md README 
+	$ <span class="token function">git</span> <span class="token function">rm</span> README.md 
+	$ <span class="token function">git</span> <span class="token function">add</span> README	
+</code></pre></div></li></ul></li></ul> <h2 id="viewing-the-commit-history"><a href="#viewing-the-commit-history" class="header-anchor">#</a> Viewing the Commit History</h2> <ul><li><p>COMMAND:  <code>git log</code></p> <ul><li>output info
+<ul><li>By default, lists the commits made in that repository <strong>in reverse chronological order</strong></li> <li>SHA-1 checksum</li> <li>the author’s name and email</li> <li>the date written</li> <li>the commit message</li></ul></li> <li>There are a huge number and variety of <strong>options</strong> to the <code>git log</code> command are available to show you exactly what you’re looking for<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log 
+commit ca82a6dff817ec66f44342007202690a93763949 
+Author: Scott Chacon 
+Date: Mon Mar <span class="token number">17</span> <span class="token number">21</span>:52:11 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Change version number 
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 
+Author: Scott Chacon 
+Date: Sat Mar <span class="token number">15</span> <span class="token number">16</span>:40:33 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Remove unnecessary <span class="token builtin class-name">test</span> 
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6 
+Author: Scott Chacon 
+Date: Sat Mar <span class="token number">15</span> <span class="token number">10</span>:31:28 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Initial commit
+</code></pre></div></li></ul></li> <li><p><code>-p</code> / <code>--patch</code></p> <ul><li>show <strong>the diff introduced</strong> (the patch output) in each commit
+<ul><li>displays the same information but with a <strong>diff</strong> directly following each entry</li></ul></li></ul></li> <li><p><code>--stat</code></p> <ul><li><strong>abbreviated stats</strong> for each commit<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--stat</span> 
+commit ca82a6dff817ec66f44342007202690a93763949 
+Author: Scott Chacon 
+Date: Mon Mar <span class="token number">17</span> <span class="token number">21</span>:52:11 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Change version number  
+
+Rakefile <span class="token operator">|</span> <span class="token number">2</span> +-  <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span> 
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 
+Author: Scott Chacon 
+Date: Sat Mar <span class="token number">15</span> <span class="token number">16</span>:40:33 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Remove unnecessary <span class="token builtin class-name">test</span>  
+
+lib/simplegit.rb <span class="token operator">|</span> <span class="token number">5</span> -----  
+<span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">5</span> deletions<span class="token punctuation">(</span>-<span class="token punctuation">)</span> 
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6 
+Author: Scott Chacon 
+Date: Sat Mar <span class="token number">15</span> <span class="token number">10</span>:31:28 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Initial commit  
+
+README <span class="token operator">|</span> <span class="token number">6</span> ++++++  
+Rakefile <span class="token operator">|</span> <span class="token number">23</span> +++++++++++++++++++++++  
+lib/simplegit.rb <span class="token operator">|</span> <span class="token number">25</span> +++++++++++++++++++++++++  
+<span class="token number">3</span> files changed, <span class="token number">54</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+</code></pre></div></li></ul></li> <li><p><code>--pretty</code></p> <ul><li>changes the <strong>output formatss</strong> other than the default
+<ul><li>option value
+<ul><li><code>oneline</code> <ul><li>prints each commit on a single line</li></ul></li> <li><code>short</code>, <code>full</code>, and <code>fuller</code> ......</li> <li>specify your own log output format
+<img src="/assets/img/Pasted-image-20230330014010.68f4b40d.png" alt=""></li></ul></li></ul></li> <li>E.<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline 
+ca82a6dff817ec66f44342007202690a93763949 Change version number 
+085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7 Remove unnecessary <span class="token builtin class-name">test</span> 
+a11bef06a3f659402fe7563abf99ad00de2209e6 Initial commit
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>format:<span class="token string">&quot;%h - %an, %ar : %s&quot;</span> 
+ca82a6d - Scott Chacon, <span class="token number">6</span> years ago <span class="token builtin class-name">:</span> Change version number 
+085bb3b - Scott Chacon, <span class="token number">6</span> years ago <span class="token builtin class-name">:</span> Remove unnecessary <span class="token builtin class-name">test</span> 
+a11bef0 - Scott Chacon, <span class="token number">6</span> years ago <span class="token builtin class-name">:</span> Initial commit
+</code></pre></div></li></ul></li> <li><p><code>--graph</code></p> <ul><li>adds a nice little ASCII graph showing your branch and merge history</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>format:<span class="token string">&quot;%h %s&quot;</span> <span class="token parameter variable">--graph</span> 
+* 2d3acf9 Ignore errors from SIGCHLD on <span class="token builtin class-name">trap</span> 
+* 5e3ee11 Merge branch <span class="token string">'master'</span> of https://github.com/dustin/grit.git 
+<span class="token operator">|</span><span class="token punctuation">\</span> 
+<span class="token operator">|</span> * 420eac9 Add method <span class="token keyword">for</span> getting the current branch 
+* <span class="token operator">|</span> 30e367c Timeout code and tests <span class="token number">43</span> 
+* <span class="token operator">|</span> 5a09431 Add <span class="token function">timeout</span> protection to grit 
+* <span class="token operator">|</span> e1193f8 Support <span class="token keyword">for</span> heads with slashes <span class="token keyword">in</span> them 
+<span class="token operator">|</span>/ 
+* d6016bc Require <span class="token function">time</span> <span class="token keyword">for</span> xmlschema 
+* 11d191e Merge branch <span class="token string">'defunkt'</span> into <span class="token builtin class-name">local</span>
+</code></pre></div></li> <li><p>common options
+<img src="/assets/img/Pasted-image-20230330014539.2aad55a0.png" alt=""></p></li> <li><p>Limiting Log Output</p> <ul><li>time-limiting
+<ul><li><code>--since</code></li> <li><code>--until</code></li></ul></li> <li><code>--author</code></li> <li><code>--grep</code></li> <li><code>--all-match</code></li> <li><code>-S</code> <ul><li>takes a string as value</li> <li>shows only those commits that changed <strong>the number of occurrences</strong> of that string</li> <li>E. <code>git log -S function_name</code></li></ul></li> <li><code>--</code> <ul><li>后跟file path, limit the log output to commits that introduced a change to those files.</li> <li>E. <code>git log -- path/to/file</code></li></ul></li> <li><code>--no-merges</code>: Preventing the display of merge commits</li> <li>E.<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span><span class="token string">&quot;%h - %s&quot;</span> <span class="token parameter variable">--author</span><span class="token operator">=</span><span class="token string">'Junio C Hamano'</span> <span class="token parameter variable">--since</span><span class="token operator">=</span><span class="token string">&quot;2008-10-01&quot;</span> <span class="token punctuation">\</span>   <span class="token parameter variable">--before</span><span class="token operator">=</span><span class="token string">&quot;2008-11-01&quot;</span> --no-merges -- t/ 
+5610e3b - Fix testcase failure when extended attributes are <span class="token keyword">in</span> use 
+acd3b9e - Enhance hold_lock_file_for_<span class="token punctuation">{</span>update,append<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span> API 
+f563754 - demonstrate breakage of detached checkout with symbolic <span class="token function">link</span> HEAD 
+d1a43f2 - reset --hard/read-tree <span class="token parameter variable">--reset</span> -u: remove unmerged new paths 
+51a94af - Fix <span class="token string">&quot;checkout --track -b newbranch&quot;</span> on detached HEAD 
+b0ad11e - pull: allow <span class="token string">&quot;git pull origin <span class="token variable">$something</span>:<span class="token variable">$current_branch</span>&quot;</span> into an unborn branc
+</code></pre></div></li></ul> <p><img src="/assets/img/Pasted-image-20230330015134.499e2810.png" alt=""></p></li></ul> <h2 id="undo-things"><a href="#undo-things" class="header-anchor">#</a> Undo Things</h2> <blockquote><p>Be careful! because you can’t always undo some of these undos. This is one of the few areas in Git where you may lose some work if you do it wrong</p></blockquote> <ul><li>COMMAND:  <code>git commit --amend</code> <ul><li>To <strong>amend your last commit</strong> <ul><li>Actually, you <strong>replace</strong> the old entirel<strong>y with a new &amp; improved commit</strong>, not so much fix it
+<ul><li>so it as if the previous commit never happend and it won't show up in your repository</li></ul></li> <li>It can <strong>make minor improvements to the last commit</strong>, without cluttering your repository history with commit messages like  “Oops, forgot to add a file” or “Darn, fixing a typo in last commit&quot;</li> <li>E.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">'Initial commit'</span> 
+$ <span class="token function">git</span> <span class="token function">add</span> forgotten_file 
+$ <span class="token function">git</span> commit <span class="token parameter variable">--amend</span>
+</code></pre></div></li> <li>ACTION: Just like the common commit comand, the same commit-message editor fires up, but it <strong>already contains the message</strong> of your <strong>previous commit</strong>.
+<ul><li>You can edit the message the same as always, but it overwrites your previous commit</li></ul></li> <li>NOTE: PLEASE Only amend commits that are <strong>still local</strong> and have <strong>not been pushed</strong> somewhere
+<ul><li>Amending previously pushed commits and force pushing the branch will cause problems for your collaborators</li></ul></li></ul></li> <li>Unstaging a staged file
+<ul><li>COMMAND: <code>git reset HEAD &lt;file&gt;</code> <ul><li>make file unstaged &amp; return to be modified</li> <li>kind dangerous, but the file in your working directory is not touched, so it's relatively safe.</li> <li>E.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> <span class="token function">add</span> * 
+$ <span class="token function">git</span> status On branch master 
+Changes to be committed:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git reset HEAD ...&quot;</span> to unstage<span class="token punctuation">)</span>   
+
+renamed: README.md -<span class="token operator">&gt;</span> README   
+modified: CONTRIBUTING.md
+
+$ <span class="token function">git</span> reset HEAD CONTRIBUTING.md 
+Unstaged changes after reset: 
+M CONTRIBUTING.md 
+
+$ <span class="token function">git</span> status 
+On branch master 
+Changes to be committed:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git reset HEAD ...&quot;</span> to unstage<span class="token punctuation">)</span>   
+
+renamed: README.md -<span class="token operator">&gt;</span> README 
+
+Changes not staged <span class="token keyword">for</span> commit:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git add ...&quot;</span> to update what will be committed<span class="token punctuation">)</span>   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git checkout -- ...&quot;</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>   
+
+modified: CONTRIBUTING.md
+</code></pre></div></li></ul></li> <li>Unmodifying a modified file
+<ul><li>COMMAND: <code>git checkout -- CONTRIBUTING.md</code> <ul><li>Git just replaced that file with the <strong>last staged or committed</strong> version</li> <li>NOTE: dangerous! It <strong>change the loca</strong>l working tree. The changes you made will be all discarded.</li> <li>E.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> status
+Changes not staged <span class="token keyword">for</span> commit:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git add ...&quot;</span> to update what will be committed<span class="token punctuation">)</span>   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git checkout -- ...&quot;</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>   
+
+modified: CONTRIBUTING.md
+
+$ <span class="token function">git</span> checkout -- CONTRIBUTING.md 
+
+$ <span class="token function">git</span> status 
+On branch master 
+Changes to be committed:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git reset HEAD ...&quot;</span> to unstage<span class="token punctuation">)</span>   
+
+renamed: README.md -<span class="token operator">&gt;</span> README
+</code></pre></div></li></ul></li></ul> <blockquote><p>Remember, anything that is committed in Git can almost always be recovered. Even commits that were on branches that were deleted or commits that were overwritten with an --amend commit can be recovered</p></blockquote> <ul><li>COMMAND: <code>git restore</code> <ul><li>RECOMMEND: a new alternative to <code>git reset</code> and <code>git checkout --</code></li> <li>undo staging: <code>git restore --staged</code></li> <li>undo modifying: <code>git restore</code></li></ul></li></ul> <h1 id="working-with-remotes"><a href="#working-with-remotes" class="header-anchor">#</a> Working with Remotes</h1> <ul><li>Remote repository
+<ul><li><strong>a version of your project</strong> that is hosted on the Internet or network somewhere
+<ul><li>also, can be on your<mark style="background:#FFB8EBA6;"> local machine.</mark> <ul><li>The word “remote” does not necessarily imply that the repository is somewhere else on the network or Internet, only that it is elsewhere</li> <li>Working with such a remote repository would <mark style="background:#FFB8EBA6;">still involve all the standard pushing, pulling and fetching operations as with any other remote</mark></li></ul></li> <li>You can have <strong>several of them</strong>, each of which generally is either <mark style="background:#FFB8EBA6;">read-only </mark>or <mark style="background:#FFB8EBA6;">read/write</mark> for you</li></ul></li></ul></li> <li>To collaborating with others, you should know how to <strong>manage</strong> these remote repositories(add/remove repo, manage branch, define them as being tracked or not ...) &amp; <strong>pushing and pulling</strong> data to share work</li></ul> <h2 id="show-remote-repo"><a href="#show-remote-repo" class="header-anchor">#</a> show remote repo</h2> <ul><li>To see which remote servers you have configured</li> <li>COMMAND: <code>git remote</code> <ul><li>It lists the <mark style="background:#FFB8EBA6;">shortnames of each remote handle</mark> you’ve specified</li> <li>by default, if you use command <code>git clone</code>, you should at least see <strong>origin</strong> — the <mark style="background:#FFB8EBA6;">default name</mark> Git gives to <mark style="background:#FFB8EBA6;">the server you cloned from</mark><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> clone https://github.com/schacon/ticgit 
+Cloning into <span class="token string">'ticgit'</span><span class="token punctuation">..</span>. 
+remote: Reusing existing pack: <span class="token number">1857</span>, done. 
+remote: Total <span class="token number">1857</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>, reused <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span> 
+Receiving objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">1857</span>/1857<span class="token punctuation">)</span>, <span class="token number">374.35</span> KiB <span class="token operator">|</span> <span class="token number">268.00</span> KiB/s, done. 
+Resolving deltas: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">772</span>/772<span class="token punctuation">)</span>, done. 
+Checking connectivity<span class="token punctuation">..</span>. done. 
+
+$ <span class="token builtin class-name">cd</span> ticgit 
+
+$ <span class="token function">git</span> remote 
+origin
+</code></pre></div></li> <li><code>-v</code> : shows you the <strong>URLs</strong><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> remote <span class="token parameter variable">-v</span> 
+origin https://github.com/schacon/ticgit <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span> 
+origin https://github.com/schacon/ticgit <span class="token punctuation">(</span>push<span class="token punctuation">)</span>
+</code></pre></div></li></ul></li></ul> <h2 id="adding-remote-repo"><a href="#adding-remote-repo" class="header-anchor">#</a> Adding Remote Repo</h2> <ul><li>COMMAND: <code>git remote add &lt;shortname&gt; &lt;url&gt;</code> <ul><li>add a new remote Git repo as <strong>a shortname</strong> you can <strong>reference</strong><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> remote 
+origin 
+
+$ <span class="token function">git</span> remote <span class="token function">add</span> pb https://github.com/paulboone/ticgit 
+
+$ <span class="token function">git</span> remote <span class="token parameter variable">-v</span> 
+origin https://github.com/schacon/ticgit <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span> 
+origin https://github.com/schacon/ticgit <span class="token punctuation">(</span>push<span class="token punctuation">)</span> 
+pb https://github.com/paulboone/ticgit <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span> 
+pb https://github.com/paulboone/ticgit <span class="token punctuation">(</span>push<span class="token punctuation">)</span>
+</code></pre></div><ul><li>Now you can use <mark style="background:#FFB8EBA6;">the string pb</mark> on the command line<mark style="background:#FFB8EBA6;"> in lieu of </mark>the whole<mark style="background:#FFB8EBA6;"> URL.</mark></li></ul></li></ul></li></ul> <h2 id="fetching-pulling-from-your-reomte"><a href="#fetching-pulling-from-your-reomte" class="header-anchor">#</a> Fetching &amp; Pulling from Your Reomte</h2> <ul><li>COMMAND: <code>git fetch &lt;remote&gt;</code> <ul><li>Git will go out to that remote project and <strong>pulls down all the data</strong> from that remote project that <strong>you don’t have yet</strong> (since you<mark style="background:#FFB8EBA6;"> cloned or last fetched </mark>from remote)
+<ul><li>After you do this, you should have <strong>references to all the branches</strong> <mark style="background:#FFB8EBA6;">from that remote</mark>, which you can merge in or inspect at any time</li></ul></li> <li>It <strong>only downloads the data</strong> to your local repository — it doesn’t automatically merge
+<ul><li>You have to<mark style="background:#FFB8EBA6;"> merge it manually</mark> into your work when you’re ready.
+<img src="/assets/img/Pasted-image-20230402171221.dac777a7.png" alt=""> <img src="/assets/img/Pasted-image-20230402171254.2436d484.png" alt=""> <img src="/assets/img/Pasted-image-20230402171346.257e4da2.png" alt=""></li></ul></li> <li>E.
+<ul><li>Paul’s master branch is now accessible locally as <strong>pb/master</strong></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> fetch pb 
+remote: Counting objects: <span class="token number">43</span>, done. 
+remote: Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">36</span>/36<span class="token punctuation">)</span>, done. 
+remote: Total <span class="token number">43</span> <span class="token punctuation">(</span>delta <span class="token number">10</span><span class="token punctuation">)</span>, reused <span class="token number">31</span> <span class="token punctuation">(</span>delta <span class="token number">5</span><span class="token punctuation">)</span> 
+Unpacking objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">43</span>/43<span class="token punctuation">)</span>, done. 
+From https://github.com/paulboone/ticgit  
+* <span class="token punctuation">[</span>new branch<span class="token punctuation">]</span> master -<span class="token operator">&gt;</span> pb/master  
+* <span class="token punctuation">[</span>new branch<span class="token punctuation">]</span> ticgit -<span class="token operator">&gt;</span> pb/ticgit
+</code></pre></div></li></ul></li> <li>COMMAND: <code>git pull</code> <ul><li>automatically <strong>fetch and then merge</strong> that remote branch <strong>into your current branch</strong></li></ul></li></ul> <h2 id="pushing-to-your-remote"><a href="#pushing-to-your-remote" class="header-anchor">#</a> Pushing to Your Remote</h2> <ul><li>COMMAND: <code>git push &lt;remote&gt; &lt;branch&gt;</code> <ul><li>push any commits you’ve done back up to the server</li> <li>NOTE: This command works only if you cloned from a server to which you <strong>have write access</strong> and if <strong>nobody has pushed in the meantime</strong> <ul><li>If you and someone else clone at the same time and they push upstream and then you push upstream, your push will <mark style="background:#FFB8EBA6;">rightly be rejected</mark>. You’ll have to <mark style="background:#FFB8EBA6;">fetch their work first</mark> and <mark style="background:#FFB8EBA6;">incorporate it into yours</mark> before you’ll be allowed to push</li></ul></li></ul></li></ul> <h2 id="inspecting-a-remote"><a href="#inspecting-a-remote" class="header-anchor">#</a> Inspecting a Remote</h2> <ul><li>COMMAND:  <code>git remote show &lt;remote&gt;</code> <ul><li>to see <strong>more information</strong> about a particular remote
+<ul><li>URL, the tracking branch information, all the remote references ...</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> remote show origin 
+* remote origin   
+  Fetch URL: https://github.com/schacon/ticgit   
+  Push URL: https://github.com/schacon/ticgit   
+  HEAD branch: master   
+  Remote branches:   
+  master tracked   
+  dev-branch tracked   
+  Local branch configured <span class="token keyword">for</span> <span class="token string">'git pull'</span><span class="token builtin class-name">:</span>
+  master merges with remote master   
+  Local ref configured <span class="token keyword">for</span> <span class="token string">'git push'</span><span class="token builtin class-name">:</span>   
+  master pushes to master <span class="token punctuation">(</span>up to <span class="token function">date</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> remote show origin 
+* remote origin   
+  URL: https://github.com/my-org/complex-project   
+  Fetch URL: https://github.com/my-org/complex-project   
+  Push URL: https://github.com/my-org/complex-project   
+  HEAD branch: master   
+  Remote branches:   
+  master                       tracked   
+  dev-branch                   tracked   
+  markdown-strip               tracked   
+  issue-43 new                 <span class="token punctuation">(</span>next fetch will store <span class="token keyword">in</span> remotes/origin<span class="token punctuation">)</span>   
+  issue-45 new                 <span class="token punctuation">(</span>next fetch will store <span class="token keyword">in</span> remotes/origin<span class="token punctuation">)</span>   
+  refs/remotes/origin/issue-11 stale <span class="token punctuation">(</span>use <span class="token string">'git remote prune'</span> to remove<span class="token punctuation">)</span>   
+  Local branches configured <span class="token keyword">for</span> <span class="token string">'git pull'</span><span class="token builtin class-name">:</span>   
+  dev-branch merges with remote dev-branch   
+  master merges with remote master   
+  Local refs configured <span class="token keyword">for</span> <span class="token string">'git push'</span><span class="token builtin class-name">:</span>   
+  dev-branch pushes to dev-branch <span class="token punctuation">(</span>up to <span class="token function">date</span><span class="token punctuation">)</span>   
+  markdown-strip pushes to markdown-strip <span class="token punctuation">(</span>up to <span class="token function">date</span><span class="token punctuation">)</span>   
+  master pushes to master <span class="token punctuation">(</span>up to <span class="token function">date</span><span class="token punctuation">)</span>
+</code></pre></div></li></ul></li></ul> <h2 id="renaming-removing-remote"><a href="#renaming-removing-remote" class="header-anchor">#</a> Renaming &amp; Removing Remote</h2> <ul><li>COMMAND: <code>git remote rename &lt;remote&gt; &lt;newname&gt;</code> <ul><li>NOTE：this <mark style="background:#FFB8EBA6;">changes all your remote-tracking branch names</mark>, too. What used to be referenced at <mark style="background:#FFB8EBA6;">pb/master</mark> is now at <mark style="background:#FFB8EBA6;">paul/master</mark>.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> remote <span class="token function">rename</span> pb paul 
+$ <span class="token function">git</span> remote 
+origin 
+paul	
+</code></pre></div></li> <li>COMMAND: <code>git remote rm/remove</code> <ul><li>all <mark style="background:#FFB8EBA6;">remote-tracking branches</mark> and <mark style="background:#FFB8EBA6;">configuration settings </mark>associated with that remote are also deleted.</li></ul></li></ul> <h1 id="tagging"><a href="#tagging" class="header-anchor">#</a> Tagging</h1> <blockquote><p>Typically, people use this functionality to mark release points (v1.0, v2.0 and so on)</p></blockquote> <ul><li>You will learn how to<mark style="background:#FFB8EBA6;"> list, create and delete</mark> tag, and different kinds of tags</li></ul> <h2 id="listing-your-tags"><a href="#listing-your-tags" class="header-anchor">#</a> Listing Your Tags</h2> <ul><li>COMMAND: <code>git tag</code> <ul><li>Show <strong>all</strong> tags<mark style="background:#FFB8EBA6;"> in alphabetical order</mark><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> tag 
+v1.0 
+v2.0
+</code></pre></div></li> <li><code>-l/--list</code> <ul><li>search for tags that match a <strong>particular pattern</strong>.
+<ul><li>You should supply <mark style="background:#FFB8EBA6;">a wildcard pattern</mark> to<mark style="background:#FFB8EBA6;"> match tag names</mark></li></ul></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> tag <span class="token parameter variable">-l</span> <span class="token string">&quot;v1.8.5*&quot;</span> 
+v1.8.5 
+v1.8.5-rc0 
+v1.8.5-rc1 
+v1.8.5-rc2 
+v1.8.5-rc3 
+v1.8.5.1 
+v1.8.5.2 
+v1.8.5.3 
+v1.8.5.4 
+v1.8.5.5
+</code></pre></div></li></ul></li></ul> <h2 id="creating-tags"><a href="#creating-tags" class="header-anchor">#</a> Creating Tags</h2> <ul><li>Git supports two types of tags: <strong>lightweight</strong> and <strong>annotated</strong> <ul><li>lightweight: <strong>just a pointer</strong> to a specific commit
+<ul><li>much like a<mark style="background:#FFB8EBA6;"> branch that doesn’t change</mark></li></ul></li> <li>Annotated: stored as <strong>full objects</strong> in the Git database
+<ul><li>They’re <mark style="background:#FFB8EBA6;">checksummed</mark>; contain the<mark style="background:#FFB8EBA6;"> tagger name, email, and date</mark>; have a <mark style="background:#FFB8EBA6;">tagging message</mark>; and can be<mark style="background:#FFB8EBA6;"> signed and verified</mark> with GNU Privacy Guard (GPG)</li></ul></li></ul></li></ul> <h3 id="annotated-tags"><a href="#annotated-tags" class="header-anchor">#</a> Annotated Tags</h3> <ul><li>COMMAND: <code>git tag -a &lt;tagname&gt;</code> <ul><li>You can add <code>-m</code>  to specifies a tagging message, otherwise Git will launch your editor to allow you to type in your tag message<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> tag <span class="token parameter variable">-a</span> v1.4 <span class="token parameter variable">-m</span> <span class="token string">&quot;my version 1.4&quot;</span> 
+
+$ <span class="token function">git</span> tag 
+v0.1 
+v1.3 
+v1.4
+</code></pre></div></li> <li>using <code>git show</code>, you can see the tag data along with the commit which is tagged<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> show v1.4 
+tag v1.4 
+Tagger: Ben Straub 
+Date: Sat May <span class="token number">3</span> <span class="token number">20</span>:19:12 <span class="token number">2014</span> <span class="token parameter variable">-0700</span> 
+
+my version <span class="token number">1.4</span> <span class="token number">56</span> 
+
+commit ca82a6dff817ec66f44342007202690a93763949 
+Author: Scott Chacon 
+Date: Mon Mar <span class="token number">17</span> <span class="token number">21</span>:52:11 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Change version number
+</code></pre></div></li></ul></li></ul> <h3 id="lightweight-tags"><a href="#lightweight-tags" class="header-anchor">#</a> Lightweight Tags</h3> <ul><li>Lightweight Tag is bascially the commit checksum stored in a file, no other info</li> <li>COMMAND: <code>git tag &lt;tagname&gt;</code> <ul><li>if you run <code>git show</code> on the tag, you don’t see the extra tag information, only commit info</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> tag v1.4-lw 
+
+$ <span class="token function">git</span> tag 
+v0.1 
+v1.3 
+v1.4 
+v1.4-lw 
+v1.5
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> show v1.4-lw 
+commit ca82a6dff817ec66f44342007202690a93763949 
+Author: Scott Chacon 
+Date: Mon Mar <span class="token number">17</span> <span class="token number">21</span>:52:11 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Change version number
+</code></pre></div></li></ul> <h2 id="tagging-later"><a href="#tagging-later" class="header-anchor">#</a> Tagging Later</h2> <ul><li>COMMAND:  add the <strong>checksum</strong>(or part of it) of the commit <strong>after</strong> the tag-add command<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline 
+15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch <span class="token string">'experiment'</span> 
+a6b4c97498bd301d84096da251c98a07c7723e65 Create <span class="token function">write</span> support 
+0d52aaab4479697da7686c15f77a3d64d9165190 One <span class="token function">more</span> thing 
+6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch <span class="token string">'experiment'</span> 
+0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc Add commit <span class="token keyword">function</span> 
+4682c3261057305bdd616e23b64b0857d832627b Add todo <span class="token function">file</span> 
+166ae0c4d3f420721acbb115cc33848dfcc2121a Create <span class="token function">write</span> support <span class="token number">57</span> 
+9fceb02d0ae598e95dc970b74767f19372d61af8 Update rakefile 
+964f16d36dfccde844893cac5b347e7b3d44abbc Commit the todo 
+8a5cbc430f1a9c3d00faaeffd07798508422908a Update readme
+
+$ <span class="token function">git</span> tag <span class="token parameter variable">-a</span> v1.2 9fceb02
+
+$ <span class="token function">git</span> show v1.2 
+tag v1.2 
+Tagger: Scott Chacon 
+Date: Mon Feb <span class="token number">9</span> <span class="token number">15</span>:32:16 <span class="token number">2009</span> <span class="token parameter variable">-0800</span> 
+
+version <span class="token number">1.2</span> 
+
+commit 9fceb02d0ae598e95dc970b74767f19372d61af8 
+Author: Magnus Chacon 
+Date: Sun Apr <span class="token number">27</span> <span class="token number">20</span>:43:35 <span class="token number">2008</span> <span class="token parameter variable">-0700</span>   
+
+Update rakefile
+</code></pre></div></li></ul> <h2 id="sharing-tags"><a href="#sharing-tags" class="header-anchor">#</a> Sharing Tags</h2> <ul><li>By default, the <code>git push</code> command <strong>doesn’t transfer tags</strong> to remote servers.
+<ul><li>You will have to <strong>explicitly push tags</strong> to a shared server</li> <li>This process is just<mark style="background:#FFB8EBA6;"> like sharing remote branches</mark></li></ul></li> <li>COMMAND: <code>git push &lt;remote&gt; &lt;tagname&gt;</code><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> push origin v1.5 
+Counting objects: <span class="token number">14</span>, done. 
+Delta compression using up to <span class="token number">8</span> threads. 
+Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">12</span>/12<span class="token punctuation">)</span>, done. 
+Writing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">14</span>/14<span class="token punctuation">)</span>, <span class="token number">2.05</span> KiB <span class="token operator">|</span> <span class="token number">0</span> bytes/s, done. 
+Total <span class="token number">14</span> <span class="token punctuation">(</span>delta <span class="token number">3</span><span class="token punctuation">)</span>, reused <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span> 
+To git@github.com:schacon/simplegit.git 
+* <span class="token punctuation">[</span>new tag<span class="token punctuation">]</span> v1.5 -<span class="token operator">&gt;</span> v1.5
+</code></pre></div><ul><li><code>--tags</code> <ul><li>push all of tags to server, both lightweight and annotated tags</li></ul></li> <li><code>--follow-tags</code> <ul><li>only annotated tags</li></ul></li></ul></li></ul> <h2 id="deleting-tags"><a href="#deleting-tags" class="header-anchor">#</a> Deleting Tags</h2> <ul><li>COMMAND: <code>git tag -d &lt;tagname&gt;</code> <ul><li>2 ways to delete the tag in the remote server
+<ul><li><code>git push :refs/tags/&lt;tagname&gt;</code> <ul><li>push the <strong>null value</strong> before the colon</li></ul></li> <li><code>git push origin --delete &lt;tagname&gt;</code> <ul><li>a more intuitive way</li></ul></li></ul></li></ul></li></ul> <h2 id="checking-out-tags"><a href="#checking-out-tags" class="header-anchor">#</a> Checking out Tags</h2> <ul><li>You can do a <code>git checkout</code> of  a tag
+<ul><li>NOTE: this puts your repository in “<mark style="background:#FFB8EBA6;">detached HEAD</mark>” state
+<ul><li>In this state, if you make changes and then create a commit, the tag will stay the same, but <mark style="background:#FFB8EBA6;">your new commit won’t belong to any branch</mark> and will be <mark style="background:#FFB8EBA6;">unreachable, except by the exact commit hash</mark></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout v2.0.0 
+Note: switching to <span class="token string">'v2.0.0'</span><span class="token builtin class-name">.</span> 
+
+You are <span class="token keyword">in</span> <span class="token string">'detached HEAD'</span> state. You can <span class="token function">look</span> around, <span class="token function">make</span> experimental changes and commit them, and you can discard any commits you <span class="token function">make</span> <span class="token keyword">in</span> this state without impacting any branches by performing another checkout. 
+
+If you want to create a new branch to retain commits you create, you may <span class="token keyword">do</span> so <span class="token punctuation">(</span>now or later<span class="token punctuation">)</span> by using <span class="token parameter variable">-c</span> with the switch command. Example:   
+
+<span class="token function">git</span> switch <span class="token parameter variable">-c</span> 
+
+Or undo this operation with:   
+
+<span class="token function">git</span> switch - 
+
+Turn off this advice by setting config variable advice.detachedHead to <span class="token boolean">false</span> 
+
+HEAD is now at 99ada87<span class="token punctuation">..</span>. Merge pull request <span class="token comment">#89 from schacon/appendix-final </span>
+
+$ <span class="token function">git</span> checkout v2.0-beta-0.1 
+Previous HEAD position was 99ada87<span class="token punctuation">..</span>. Merge pull request <span class="token comment">#89 from schacon/appendix-final </span>
+HEAD is now at df3f601<span class="token punctuation">..</span>. Add atlas.json and cover image
+</code></pre></div></li></ul></li></ul> <h1 id="git-aliases"><a href="#git-aliases" class="header-anchor">#</a> Git Aliases</h1> <ul><li>you can easily set up <strong>an alias for each command</strong> using <code>git config</code> <ul><li>In this way, you dont't have to type in the entire text of each command</li></ul></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.co checkout 
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.br branch 
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.ci commit 
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.st status
+</code></pre></div><ul><li>It can also be used to create commands you think you should exist
+<ul><li>E. Creating your own <code>unstage</code> command.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.unstage <span class="token string">'reset HEAD --'</span>
+
+$ <span class="token function">git</span> unstage fileA
+</code></pre></div><ul><li>E. Creating your own <code>last</code>  command</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.last <span class="token string">'log -1 HEAD'</span>
+$ <span class="token function">git</span> last 
+commit 66938dae3329c7aebe598c2246a8e6af90d04646 
+Author: Josh Goebel 
+Date: Tue Aug <span class="token number">26</span> <span class="token number">19</span>:48:51 <span class="token number">2008</span> +0800   
+
+Test <span class="token keyword">for</span> current <span class="token function">head</span>   
+
+Signed-off-by: Scott Chacon
+</code></pre></div></li> <li>alias an <strong>external</strong> command
+<ul><li>start the command with a <code>!</code> character</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.visual <span class="token string">'!gitk'</span>
+</code></pre></div></li></ul></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#from-a-local-directory" title="From a local directory">From a local directory</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#clone" title="clone">clone</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#tracked-file" title="Tracked File">Tracked File</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#check-the-status" title="Check the Status">Check the Status</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#ignoring-files" title="Ignoring Files">Ignoring Files</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#view-detailed-changes" title="View Detailed Changes">View Detailed Changes</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#commtting-changes" title="Commtting Changes">Commtting Changes</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#removing-file" title="Removing File">Removing File</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#moving-file" title="Moving File">Moving File</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#viewing-the-commit-history" title="Viewing the Commit History">Viewing the Commit History</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#undo-things" title="Undo Things">Undo Things</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#show-remote-repo" title="show remote repo">show remote repo</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#adding-remote-repo" title="Adding Remote Repo">Adding Remote Repo</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#fetching-pulling-from-your-reomte" title="Fetching &amp; Pulling from Your Reomte">Fetching &amp; Pulling from Your Reomte</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#pushing-to-your-remote" title="Pushing to Your Remote">Pushing to Your Remote</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#inspecting-a-remote" title="Inspecting a Remote">Inspecting a Remote</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#renaming-removing-remote" title="Renaming &amp; Removing Remote">Renaming &amp; Removing Remote</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#listing-your-tags" title="Listing Your Tags">Listing Your Tags</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#creating-tags" title="Creating Tags">Creating Tags</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#annotated-tags" title="Annotated Tags">Annotated Tags</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#lightweight-tags" title="Lightweight Tags">Lightweight Tags</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#tagging-later" title="Tagging Later">Tagging Later</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#sharing-tags" title="Sharing Tags">Sharing Tags</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#deleting-tags" title="Deleting Tags">Deleting Tags</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#checking-out-tags" title="Checking out Tags">Checking out Tags</a></div></div></div></div> <footer class="footer" data-v-60ffa98d><div class="footer-left-wrap" data-v-60ffa98d><ul class="contact" data-v-60ffa98d><li class="contact-item" data-v-60ffa98d><a href="https://github.com/PFCS33" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-60ffa98d><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-60ffa98d><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-60ffa98d></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-60ffa98d><ul class="copyright" data-v-60ffa98d><li class="copyright-item" data-v-60ffa98d><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-60ffa98d>Privacy Policy</a></li><li class="copyright-item" data-v-60ffa98d>MIT Licensed | Copyright © 2023-present pfcs</li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7ac337ed.js" defer></script><script src="/assets/js/9.a3b91e3f.js" defer></script><script src="/assets/js/4.2a0927de.js" defer></script><script src="/assets/js/8.35d19e95.js" defer></script>
+  </body>
+</html>

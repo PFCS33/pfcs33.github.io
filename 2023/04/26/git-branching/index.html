@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git Branching | pfcs</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="progit - git branching">
+    <meta name="author" content="pfcs">
+    
+    <link rel="preload" href="/assets/css/0.styles.1d448ed8.css" as="style"><link rel="preload" href="/assets/js/app.7ac337ed.js" as="script"><link rel="preload" href="/assets/js/9.a3b91e3f.js" as="script"><link rel="preload" href="/assets/js/4.2a0927de.js" as="script"><link rel="preload" href="/assets/js/6.155b7c80.js" as="script"><link rel="prefetch" href="/assets/js/10.37cf788a.js"><link rel="prefetch" href="/assets/js/11.6fbdc316.js"><link rel="prefetch" href="/assets/js/12.6b1664a7.js"><link rel="prefetch" href="/assets/js/13.0b1efab5.js"><link rel="prefetch" href="/assets/js/14.c36186e5.js"><link rel="prefetch" href="/assets/js/15.bac1192b.js"><link rel="prefetch" href="/assets/js/16.34e70c15.js"><link rel="prefetch" href="/assets/js/17.028c14d5.js"><link rel="prefetch" href="/assets/js/18.36dc5cdd.js"><link rel="prefetch" href="/assets/js/19.e0b44f6b.js"><link rel="prefetch" href="/assets/js/20.daa610d1.js"><link rel="prefetch" href="/assets/js/3.e899b7d9.js"><link rel="prefetch" href="/assets/js/5.32e602e2.js"><link rel="prefetch" href="/assets/js/7.d9498d3c.js"><link rel="prefetch" href="/assets/js/8.35d19e95.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.2f9b64f2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1d448ed8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><img src="/images/pfcs-logos/logo.png" alt="logo" class="logo"> <a href="/" class="nav-link home-link">pfcs </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/posts/" class="nav-link">Posts</a></li><li class="nav-item"><a href="/projects/" class="nav-link">Projects</a></li><li class="nav-item"><a href="/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">pfcs </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/posts/" class="nav-link">Posts</a></li><li class="mobile-nav-item"><a href="/projects/" class="nav-link">Projects</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">Tags</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        Git Branching
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">pfcs</span> <span itemprop="address">   in Beijing</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2023-04-26T00:00:00.000Z">
+      2023-04-26
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/Git" data-v-42ccfcd5><span data-v-42ccfcd5>Git</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><ul><li><strong>Branching</strong> means you <em>diverge from the main line</em> of development and continue to do work <em>without messing with that main line</em></li> <li>Git branches is <em>weight and fast</em> <ul><li>making <em>branching operations</em> nearly <em>instantaneous</em></li> <li><em>switching back and forth</em> between branches generally just as fast</li></ul></li></ul> <blockquote><p>basically, branch in Git is a <em>simple file</em> which contains the 40 characters SHA-1 checksum of the commit it points to.(just need to add <strong>40 characters and a new line</strong>)</p></blockquote> <h1 id="branches-in-a-nutshell"><a href="#branches-in-a-nutshell" class="header-anchor">#</a> Branches in a Nutshell</h1> <ul><li>Recall: How Git <em>stores its data</em> <ul><li>a series of <strong>snapshots</strong>.</li></ul></li> <li>When you make a commit:
+<ul><li>Git <strong>stores a object</strong> containing a <strong>pointer</strong> to the <em>snapshot</em> of  your commit project (commit object)</li> <li>this object also contains:
+<ul><li>author’s name</li> <li>email address</li> <li>commit message</li> <li><em>pointer to the parent commit</em> (which directly came before this commit)
+<ul><li><em>zero parents</em> for the initial commit</li> <li><em>one parent</em> for a normal commit</li> <li><em>multiple parents</em> for a commit that <em>results from a merge</em> of two or more branches.</li></ul></li></ul></li> <li>E. Assume that you have a directory containing <em>three files</em>, and you <em>stage them and all commit</em>.
+<ul><li>Staging file, Git:
+<ol><li>computs the <em>checksum for each one</em></li> <li>store that version of <em>file</em> in the <em>Git repository</em>(Git refers to them as <strong>blobs</strong>)</li> <li>adds that <em>checksum</em> to <em>staging area</em></li></ol></li> <li>commit, Git
+<ol><li><em>checksums</em> each <em>subdirectory</em> (in this case, just the root project directory)</li> <li>stores them as a <strong>tree object</strong> in the <em>Git repository</em></li> <li>creates a <strong>commit object</strong> that has the <em>metadata and a pointer</em> to the <strong>root project tree</strong> <ul><li>so it can re-create that snapshot when needed</li></ul></li></ol></li> <li>Now, Git repository now contains five objects:
+<ul><li>three blobs
+<ul><li>each representing the <em>contents of one of the three files</em></li></ul></li> <li>one tree
+<ul><li>lists the <em>contents of the directory</em> and <em>specifies which file names are stored as which blobs</em></li></ul></li> <li>one commit
+<ul><li>with the pointer to that root tree</li> <li>and all the commit matadata
+<img src="/assets/img/Pasted-image-20230409141751.390567cd.png" alt=""></li></ul></li></ul></li> <li>if you make some changes and commit again, the next commit will store a pointer to the commit that came immediately before it.
+<img src="/assets/img/Pasted-image-20230409141937.1ef382f9.png" alt=""></li></ul></li></ul></li> <li>A <strong>branch</strong> in Git is simply a <em>lightweight movable</em> <strong>pointer</strong> to one of these <em>commits</em> <ul><li>The default branch name in Git is <em>master.</em> <ul><li>As you start making commits, you’re given a master branch that <em>points to the last commit you made</em></li> <li>Every time you commit, the master branch pointer <em>moves forward automatically</em>.</li></ul> <blockquote><p>Note: The “master” branch in Git is not special. It is exactly like any other branch. The only reason nearly every repository has one is that the <code>git init</code> command creates it by default and most people don’t bother to change it</p></blockquote></li></ul></li></ul> <h2 id="creating-a-new-branch"><a href="#creating-a-new-branch" class="header-anchor">#</a> Creating a New Branch</h2> <ul><li>COMMAND: <code>git branch &lt;branch-name&gt;</code> <ul><li>just creates <strong>a new pointer</strong> for you to move around.
+<ul><li>It points to <em>the same commit</em> you're <em>currently on</em>.</li></ul></li> <li>It <strong>doesn't switch</strong> to the new branch.</li> <li>E. <code>$ git branch testing</code> <img src="/assets/img/Pasted-image-20230409143010.29ac252c.png" alt=""></li></ul></li> <li>How does Git know <em>what branch you’re currently on</em>?
+<ul><li>It keep a <em>special pointer</em> called <strong>HEAD</strong> <ul><li>a pointer <strong>to the local branch</strong> you’re currently on
+<img src="/assets/img/Pasted-image-20230409143435.369a47e3.png" alt=""></li> <li>In this case, you’re <em>still on master branch</em></li></ul></li> <li>You can run <code>git log</code> command to shows you <em>where the branch</em> pointers are <em>pointing</em>. The option is called <code>--decorate</code><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--oneline</span> <span class="token parameter variable">--decorate</span> 
+f30ab <span class="token punctuation">(</span>HEAD -<span class="token operator">&gt;</span> master, testing<span class="token punctuation">)</span> Add feature <span class="token punctuation">\</span>#32 - ability to <span class="token function">add</span> new formats to the central interface 
+34ac2 Fix bug <span class="token punctuation">\</span>#1328 - stack overflow under certain conditions 
+98ca9 Initial commit
+</code></pre></div><ul><li>You can see the <em>master and testing</em> branches that are right there next to the <em>f30ab commit</em></li></ul></li></ul></li></ul> <h2 id="switch-branches"><a href="#switch-branches" class="header-anchor">#</a> Switch Branches</h2> <ul><li>NOTE: From Git version 2.23 onwards you can use <code>git switch</code> instead of <code>git checkout</code> to
+<ul><li><code>git switch &lt;branch-name&gt;</code>: <em>switch</em> to an existing branch</li> <li><code>git switch -c &lt;newbranch-name&gt;</code>: <em>create &amp; switch</em> to it (<code>-c</code> stands for <code>--create</code>)</li> <li><code>git switch -</code>: <em>return</em> to your previously checked out branch</li></ul></li> <li>COMMAND: <code>git checkout &lt;branch-name&gt;</code> <ul><li>It moves <strong>HEAD</strong> to <em>point to</em> the <em>testing</em> branch
+<img src="/assets/img/Pasted-image-20230411171303.298bdf0a.png" alt=""></li> <li>COMMAND: <code>git checkout -b &lt;newbranch-name&gt;</code> <ul><li><em>Creating</em> a new branch <em>and switch</em> to it at the same time</li></ul></li></ul></li> <li>What is the significance of switching branch?
+<ul><li>you switch to a <strong>new working flow</strong> on <em>testing</em> branch, instead of the old <em>master</em> branch.</li></ul></li> <li>Let's do another commit<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">vim</span> test.rb
+$ <span class="token function">git</span> commit <span class="token parameter variable">-a</span> <span class="token parameter variable">-m</span> <span class="token string">'made a change'</span>
+</code></pre></div><ul><li>After this commit, <em>testing</em> branch will <em>move forward</em>,  but your <em>master</em> branch <em>stand still</em> ,pointing to the previous branch</li> <li>the command  <code>git commit</code> will <em>move forward the branch</em> which <em>HEAD points to</em>.
+<ul><li>So you <strong>diverge</strong> from the &quot;<em>master</em>&quot; workflow by switching branch.
+<img src="/assets/img/Pasted-image-20230411172547.f90170c4.png" alt=""></li></ul></li></ul></li> <li>Create a divergent project history
+<ul><li>Then we switch back to <em>master</em> branch
+<code>git checkout master</code> <img src="/assets/img/Pasted-image-20230411173458.43addb3b.png" alt=""> <ul><li>NOTE: In this command, Git did two things:
+<ul><li>It moved the <strong>HEAD</strong> pointer back to point to the <em>master</em> branch</li> <li>it <strong>reverted the files</strong> in your <em>working directory</em> back to the <em>snapshot that master points to</em>.
+<ul><li>This also means the changes you make <em>from this point forward will diverge</em> from an <em>older version</em> of the project</li> <li>It <em>rewinds the work</em> you have done in the <em>testing</em> branch, so you can go into <em>different direction</em></li></ul></li></ul></li> <li>NOTICE: Switching branches <em>changes files</em> in your working directory
+<ul><li>If Git cannot do it cleanly, it will not let you switch at all</li></ul></li></ul></li> <li>Let's make a few changes and commit again<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">vim</span> test.rb 
+$ <span class="token function">git</span> commit <span class="token parameter variable">-a</span> <span class="token parameter variable">-m</span> <span class="token string">'made other changes'</span>
+</code></pre></div><ul><li>Now your project history has diverged
+<ul><li>As you can see, all changes are <em>isolated in separate branches</em></li> <li>you can <em>switch back and forth</em> between the branches, and <em>merge</em> them together when you’re ready
+<img src="/assets/img/Pasted-image-20230411173821.2d773f62.png" alt=""></li></ul></li> <li>you can use <code>git log</code> to see the situation</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> log <span class="token parameter variable">--oneline</span> <span class="token parameter variable">--decorate</span> <span class="token parameter variable">--graph</span> <span class="token parameter variable">--all</span>
+* c2b9e <span class="token punctuation">(</span>HEAD, master<span class="token punctuation">)</span> Made other changes 
+<span class="token operator">|</span> * 87ab2 <span class="token punctuation">(</span>testing<span class="token punctuation">)</span> Made a change 
+<span class="token operator">|</span>/  
+* f30ab Add feature <span class="token punctuation">\</span>#32 - ability to <span class="token function">add</span> new formats to the central interface 
+* 34ac2 Fix bug <span class="token punctuation">\</span>#1328 - stack overflow under certain conditions 
+* 98ca9 initial commit of my project		```
+</code></pre></div></li></ul></li> <li>COMMAND: <code>git log</code> <ul><li><code>git log</code> can show you the branch info, but <em>by default</em>, it only shows commit history <em>below your current branch</em></li> <li>To show commit history for the desired branch, you have to explicitly specify it.
+<ul><li><code>git log &lt;branch-name&gt;</code></li> <li><code>git log --all</code></li></ul></li></ul></li> <li>NOTE: because the commit object are recording the <em>parents info</em>, finding <em>a proper merge base</em> for merging is <em>automatically done</em> for us and is generally very <em>easy to do</em></li></ul> <h1 id="basic-branching-merging"><a href="#basic-branching-merging" class="header-anchor">#</a> Basic Branching &amp; Merging</h1> <ul><li>Let's go through a simple &amp; real world example of branching and merging
+<ol><li>Do some work on a website.</li> <li>Create a branch for a new user story you’re working on.</li> <li>Do some work in that branch.</li> <li>At this stage, you’ll receive a call that another issue is critical and you need a hotfix. You’ll do the following:
+<ol><li>Switch to your production branch.</li> <li>Create a branch to add the hotfix.</li> <li>After it’s tested, merge the hotfix branch, and push to production.</li> <li>Switch back to your original user story and continue working</li></ol></li></ol></li></ul> <h2 id="basic-branching"><a href="#basic-branching" class="header-anchor">#</a> Basic Branching</h2> <ul><li>First, assuming that you are working on your project and already made some commits on the <em>master</em> branch currently on.
+<img src="/assets/img/Pasted-image-20230418171019.7ee44ef2.png" alt=""></li> <li>Now, you decide to <em>work on issue #53</em> (in whatever issue tracking system your company uses)
+<ul><li>You need to <em>create a new branch</em> and <em>switch</em> to it</li> <li>Use command  <code>git checkout -b</code> or <code>git switch -c</code><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> iss53
+Switched to a new branch <span class="token string">&quot;iss53&quot;</span>
+</code></pre></div><img src="/assets/img/Pasted-image-20230418171337.73cf0af3.png" alt=""></li></ul></li> <li>Then you work on the website and do some commit, <em>moving the iss53 forward</em><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">vim</span> index.html 
+$ <span class="token function">git</span> commit <span class="token parameter variable">-a</span> <span class="token parameter variable">-m</span> <span class="token string">'Create new footer [issue 53]'</span>
+</code></pre></div><img src="/assets/img/Pasted-image-20230418171650.2a77d8ae.png" alt=""></li> <li>Now you are called to fix an issue <em>hotfix</em> immediately
+<ul><li><p>With git, you can just switch to the <em>mater</em> branch, keeping changes you have made in <em>issue53</em></p> <ul><li>Note that do switching need a clean work tree in your current working directory</li></ul></li> <li><p>Use git command <code>git checkout</code></p> <ul><li>Now Git <em>resets your work directory</em> to the last time you commit on the <em>master</em> branch</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout master 
+Switched to branch <span class="token string">'master'</span>
+</code></pre></div></li> <li><p>create a <em>hotfix</em> branch to this commit, and fix the bug in the <em>hotfix</em> branch</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> hotfix 
+Switched to a new branch <span class="token string">'hotfix'</span> 
+$ <span class="token function">vim</span> index.html 
+$ <span class="token function">git</span> commit <span class="token parameter variable">-a</span> <span class="token parameter variable">-m</span> <span class="token string">'Fix broken email address'</span> 
+<span class="token punctuation">[</span>hotfix 1fb7853<span class="token punctuation">]</span> Fix broken email address  
+<span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">2</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+</code></pre></div><p><img src="/assets/img/Pasted-image-20230424151242.58fcba1a.png" alt=""></p></li></ul></li> <li>Now you complete your task, and finally merge the <em>hotfix</em> branch back <strong>into <em>master</em> branch</strong> <ul><li>COMMAND:  <code>git merge &lt;branch-name&gt;</code><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout master 
+$ <span class="token function">git</span> merge hotfix 
+Updating f42c576<span class="token punctuation">..</span>3a0874c 
+Fast-forward 
+index.html <span class="token operator">|</span> <span class="token number">2</span> ++ 
+<span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">2</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+</code></pre></div></li> <li>Notice that there is <em>&quot;Fast-forward&quot;</em> in the prompt message
+<ul><li>This means that Git just simply <strong>moves the master pointer forward</strong> to the commit which <em>hotfix</em> branch points to.</li> <li>When you try to merge one commit into a commit <em>which can be reached by the commit history</em>, Git simplifies things by <strong>moving the pointer forward</strong>.
+<ul><li>Direct ancestor
+<img src="/assets/img/Pasted-image-20230424172342.dea06a8c.png" alt=""></li></ul></li></ul></li></ul></li> <li>Now you can switch back to <em>issue53</em> and continue your work
+<ul><li><p>before you switch, <em>delete</em> the <em>hotfix</em> branch first, because you no longer need it.</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">-d</span> hotfix 
+Deleted branch hotfix <span class="token punctuation">(</span>3a0874c<span class="token punctuation">)</span>.
+</code></pre></div></li> <li><p>and then:</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout iss53 Switched to branch <span class="token string">&quot;iss53&quot;</span> 
+$ <span class="token function">vim</span> index.html 
+$ <span class="token function">git</span> commit <span class="token parameter variable">-a</span> <span class="token parameter variable">-m</span> <span class="token string">'Finish the new footer [issue 53]'</span> 
+<span class="token punctuation">[</span>iss53 ad82d7a<span class="token punctuation">]</span> Finish the new footer <span class="token punctuation">[</span>issue <span class="token number">53</span><span class="token punctuation">]</span> 
+<span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+</code></pre></div><p>![[Pasted image 20230424172909.png]]</p></li></ul></li></ul> <h2 id="basic-merging"><a href="#basic-merging" class="header-anchor">#</a> Basic Merging</h2> <ul><li>Now you decide that your <em>issue53</em> work is complete and ready to be <strong>merge into your <em>master</em> branch</strong> <ul><li>How: checkout the <em>branch</em> you wish to <em>merge into</em>, and then run <code>git merge</code><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout master 
+Switched to branch <span class="token string">'master'</span> 
+
+$ <span class="token function">git</span> merge iss53 
+Merge made by the <span class="token string">'recursive'</span> strategy. 
+index.html <span class="token operator">|</span> <span class="token number">1</span> + <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+</code></pre></div></li> <li>Notice it's different from <em>hotfix</em> example
+<ul><li>because the branch you want to merge with (<em>issue53</em>) is <em>not the direct ancestor</em> of your branch (<em>master</em>)
+<ul><li>In this case, your <em>development history has diverged</em></li></ul></li></ul></li> <li>Git will do a <strong>three-way merge</strong>, using the <em>two snapshots</em> the two branch point to and <em>the common ancestor</em> of two branch.
+<ul><li>At the end, Git creates <strong>a new snapshot</strong> resulting from this three-way merge, and automatically creates <strong>a new commit</strong> pointing to it</li> <li>This commit is referred to as a <strong>merge commit</strong>, special in having <strong>two parents</strong> <img src="/assets/img/Pasted-image-20230424174326.49ac7e4c.png" alt=""> <img src="/assets/img/Pasted-image-20230424174723.899159da.png" alt=""></li></ul></li></ul></li> <li>Then you can delete <em>issue53</em> branch<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">-d</span> iss53
+</code></pre></div></li></ul> <h2 id="basic-merge-conflicts"><a href="#basic-merge-conflicts" class="header-anchor">#</a> Basic Merge Conflicts</h2> <ul><li>Occasionally, the process of <em>issue53</em> example doesn't go smoothly
+<ul><li>If you change the <em>same part of the same file differently</em> in the two branches you are merging, Git won't be able to merge them cleanly, and you will get a <strong>merge conflict</strong>.<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> merge iss53 
+Auto-merging index.html 
+CONFLICT <span class="token punctuation">(</span>content<span class="token punctuation">)</span>: Merge conflict <span class="token keyword">in</span> index.html 
+Automatic merge failed<span class="token punctuation">;</span> fix conflicts and <span class="token keyword">then</span> commit the result.
+</code></pre></div></li> <li>git <em>pauses the process</em> of creating new commit and <em>wait for you</em> to resolve the conflict</li></ul></li> <li>Solve the conflicts
+<ul><li>you can run <code>git status</code> to <em>see which files are unmerged</em>, at any point <em>after the conflict</em>.</li> <li>Anything that has merge conflicts and hasn't been resolved is listed as <strong>unmerged</strong></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> status 
+On branch master You have unmerged paths.   
+<span class="token punctuation">(</span>fix conflicts and run <span class="token string">&quot;git commit&quot;</span><span class="token punctuation">)</span> 
+
+Unmerged paths:   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git add ...&quot;</span> to mark resolution<span class="token punctuation">)</span>   
+
+	both modified: index.html 
+	
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">&quot;git add&quot;</span> and/or <span class="token string">&quot;git commit -a&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>And git adds <strong>standard conflict-resolution markers</strong> to files that have conflicts
+<ul><li>you can open them <em>manually</em> and resolve those conflicts</li> <li>E. your conflict file will contains a section like this:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html
+&lt; div  id=&quot;footer&quot;&gt;contact : email.support@github.com &lt;/div&gt;
+=======
+&lt; div  id=&quot;footer&quot;&gt;
+please contact us at support@github.com
+&lt;/div&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53:index.html
+</code></pre></div><ul><li>This means that:
+<ul><li>The version in <em>HEAD</em> is the top part of the block (above the <code>=======</code>)</li> <li>The version in <em>iss53</em> branch is the bottom part</li></ul></li> <li>In order to resolve the conflict, you need to either <em>choose one side of part</em> or merge it <em>yourself</em></li> <li>E. you can <strong>replace the entire block</strong> with this:
+<ul><li>this has a little of each section,</li> <li>and the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> , <code>=======</code> , <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> lines have been removed</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;footer&quot;&gt;
+please contact us at email.support@github.com
+&lt;/div&gt;
+</code></pre></div></li></ul></li></ul></li> <li>After resolve conflicts in <em>each conflict file</em>, you can run <code>git add</code> on each conflict file to <strong>mark it as resolved</strong> in Git.</li> <li>Note: you can also use a graphical tools to resolve these issues.
+<ul><li>COMMAND: <code>git mergetool</code> <ul><li>which <em>fires up an appropriate visual merge tool</em> and walks you through the conflicts</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> mergetool This message is displayed because <span class="token string">'merge.tool'</span> is not configured. 
+See <span class="token string">'git mergetool --tool-help'</span> or <span class="token string">'git help config'</span> <span class="token keyword">for</span> <span class="token function">more</span> details. 
+<span class="token string">'git mergetool'</span> will now attempt to use one of the following tools: 
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc3 codecompare vimdiff emerge 
+Merging: 
+index.html 
+
+Normal merge conflict <span class="token keyword">for</span> <span class="token string">'index.html'</span><span class="token builtin class-name">:</span>   
+<span class="token punctuation">{</span>local<span class="token punctuation">}</span>: modified <span class="token function">file</span>   
+<span class="token punctuation">{</span>remote<span class="token punctuation">}</span>: modified <span class="token function">file</span> 
+Hit <span class="token builtin class-name">return</span> to start merge resolution tool <span class="token punctuation">(</span>opendiff<span class="token punctuation">)</span>:
+</code></pre></div></li> <li>As you exit the merge tool, <em>Git asks</em> you if the merge was successful
+<ul><li>if you answer yes, it stages the file to mark is as resolved</li> <li>you can run <code>git status</code> again to <em>verify</em> that all conflicts have been resolved</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> status 
+On branch master 
+All conflicts fixed but you are still merging.   
+<span class="token punctuation">(</span>use <span class="token string">&quot;git commit&quot;</span> to conclude merge<span class="token punctuation">)</span> 
+
+Changes to be committed:   
+	modified: index.html
+</code></pre></div></li></ul></li> <li>Finally, if you verify that everything that had conflicts has been staged, you can run <code>git commit</code> to <strong>finalize the merge commit</strong>.
+<ul><li>by default, The <em>commit message</em> by default looks something like this
+<ul><li>if you think it would be <em>helpful to others</em> looking at this merge in the future, you can modify this commit message <em>with details</em> about <em>how</em> you resolved the merge and explain <em>why</em> you did the changes you made if these are not obvious.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Merge branch 'iss53' 
+
+Conflicts:   
+index.html 
+# 
+# It looks like you may be committing a merge. 
+# If this is not correct, please remove the file 
+# .git/MERGE_HEAD 
+# and try again. 
+
+# Please enter the commit message for your changes. Lines starting 
+# with '#' will be ignored, and an empty message aborts the commit. 
+# On branch master 
+# All conflicts fixed but you are still merging. 
+# 
+# Changes to be committed: 
+# modified: index.html 
+#
+</code></pre></div></li></ul></li></ul> <h1 id="branch-management"><a href="#branch-management" class="header-anchor">#</a> Branch Management</h1> <ul><li>COMMAND: <code>git branch</code>： more than create &amp; delete
+<ul><li>without argument: give a simple list of current branch</li> <li><strong>*</strong>:  indicates the branch that you currently have checked out (<em>HEAD</em> points to)
+<ul><li>also means that if you <em>commit</em> at this point, the <em>master</em> branch will be <em>moved forward</em> with your new work.</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch   
+  iss53 
+* master   
+  testing
+</code></pre></div></li> <li><code>-v</code>:  see the last commit on each branch<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">-v</span>   
+  iss53 93b412c Fix javascript issue 
+* master 7a98805 Merge branch <span class="token string">'iss53'</span>   
+  testing 782fd34 Add scott to the author list <span class="token keyword">in</span> the readme
+</code></pre></div></li> <li><code>--merged</code> &amp; <code>--no-merged</code>: see the branches that you have or have not yet <em>merged into</em> the branch you’re <em>currently on</em> <ul><li>if you use <code>--merged</code>,  Branches on this list without the * in front of them are generally <em>fine to delete</em> with <code>git branch -d</code></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">--merged</span>   
+  iss53 
+* master
+</code></pre></div><ul><li>if you use <code>--no-merged</code>, this shows your other branch
+<ul><li>Because it contains work that isn’t merged in yet, trying to <em>delete</em> it with <code>git branch -d</code> will <em>fail</em>, you can force to do it with <code>-D</code></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">-d</span> testing 
+error: The branch <span class="token string">'testing'</span> is not fully merged. 
+If you are sure you want to delete it, run <span class="token string">'git branch -D testing'</span><span class="token builtin class-name">.</span>
+</code></pre></div></li> <li>you can add an additional argument <code>&lt;branch-name&gt;</code>, to ask about the merge state of this branch, avoiding checkout to this branch first<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> checkout testing 
+$ <span class="token function">git</span> branch --no-merged master   
+topicA   
+featureB
+</code></pre></div></li></ul></li></ul></li></ul> <h2 id="changing-a-branch-name"><a href="#changing-a-branch-name" class="header-anchor">#</a> changing a branch name</h2> <blockquote><p>Do not rename branches that are still <em>in use by other collaborators</em>.
+Do not rename a branch <em>like master/main/mainline</em> without having read the section <em>&quot;Changing the master branch name&quot;</em>.</p></blockquote> <blockquote><p>Note: this section tell about how to change branch name both <em>locally</em> and on the <em>remote server</em></p></blockquote> <ul><li>Locally:
+<ul><li>COMMAND: <code>git branch --move &lt;old-name&gt; &lt;new-name&gt;</code><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">--move</span> bad-branch-name corrected-branch-name
+</code></pre></div></li></ul></li> <li>Remote:
+<ul><li>COMMAND: <code>git push --set-upstream &lt;remote-name&gt; &lt;new-name&gt;</code><div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> push --set-upstream origin corrected-branch-name
+</code></pre></div></li></ul></li> <li>Let's take a brief look at all branches<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">--all</span> 
+* corrected-branch-name   
+main   
+remotes/origin/bad-branch-name   
+remotes/origin/corrected-branch-name   
+remotes/origin/main
+</code></pre></div><ul><li>Notice that the old branch name is still on the remote server, you can delete it with command:
+<ul><li><code>git push &lt;remote-name&gt; --delete &lt;old-branch-name&gt;</code></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> push origin <span class="token parameter variable">--delete</span> bad-branch-name
+</code></pre></div></li></ul></li></ul> <h2 id="change-a-master-branch-name"><a href="#change-a-master-branch-name" class="header-anchor">#</a> Change a master branch name</h2> <blockquote><p>Changing the name of a branch like master/main/mainline/default will <em>break</em> the integrations, services, helper utilities and build/release scripts that your repository uses.
+Before you do this, make sure you <em>consult with your collaborators</em>.
+Also, make sure you do a thorough search through your repo and <em>update any references to the old branch</em> name in your <em>code and scripts</em>.</p></blockquote> <ul><li>rename the <em>master</em> branch to <em>main</em></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> branch <span class="token parameter variable">--move</span> master main
+
+$ <span class="token function">git</span> push --set-upstream origin main
+
+$ <span class="token function">git</span> branch <span class="token parameter variable">--all</span> 
+* main   
+remotes/origin/HEAD -<span class="token operator">&gt;</span> origin/master   
+remotes/origin/main   
+remotes/origin/master
+</code></pre></div><ul><li>Now you have <em>a few more tasks</em> in front of you to complete the transition:
+<ul><li>Any <em>projects</em> that depend on this one will need to update their <em>code and/or configuration</em>.</li> <li>Update any <em>test-runner configuration files</em>.</li> <li>Adjust <em>build and release scripts</em>.</li> <li><em>Redirect settings on your repo host</em> for things like the repo’s default branch, merge rules, and other thing s that <em>match branch names</em>.</li> <li>Update references to the old branch in <em>documentation</em>.</li> <li>Close or merge any <em>pull requests</em> that target the old branch.</li></ul></li> <li>After you’ve done all these tasks, you can delete the <em>master</em> branch<div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">git</span> push origin <span class="token parameter variable">--delete</span> master
+</code></pre></div></li></ul> <h1 id="branching-workflows"><a href="#branching-workflows" class="header-anchor">#</a> Branching Workflows</h1> <blockquote><p>In this section, we’ll cover some <strong>common workflows</strong>, so you can decide if you would like to incorporate them into your own development cycle.</p></blockquote> <h2 id="long-running-branches"><a href="#long-running-branches" class="header-anchor">#</a> Long-Running Branches</h2> <ul><li>Over a long period, merging from one branch into another will occur multiple times.
+<ul><li>This means that you can have <em>several branches</em> that are <em>always open</em> and that you use for <em>different stages of your development cycle</em>, you can merge regularly from some of them into others</li></ul></li> <li>IDEA: having <strong>multiple long-running branches</strong> <ul><li>These branches are at different levels of <strong>stability</strong> <ul><li>when they reach a <em>more stable level</em>, they’re <em>merged</em> into the branch above them</li></ul></li></ul></li> <li>For example: Most Git developers keep three workflows: three branches
+<ul><li><code>master</code>: code that is entirely stable
+<ul><li>possibly only code that has been or will be <em>released</em>.</li></ul></li> <li><code>develop</code> /  <code>next</code> :
+<ul><li>work form/ use to test stability</li> <li>whenever it gets to a stable state, it can be <em>merged into</em> <code>master</code></li> <li><em>pull in</em> <code>topic</code> branches when they’re ready
+<ul><li>to make sure they pass all the tests and <em>don’t introduce bugs</em></li></ul></li></ul></li> <li><code>topic</code> <ul><li>some short-lived branches, like your earlier <code>iss53</code> branch
+<img src="/assets/img/Pasted-image-20230426153006.6a927a17.png" alt=""> <img src="/assets/img/Pasted-image-20230426153027.e0c92cfe.png" alt=""></li></ul></li></ul></li> <li>isn’t necessary, but it’s often helpful, especially when you’re dealing with very <em>large or complex projects.</em></li></ul> <h2 id="topic-branches"><a href="#topic-branches" class="header-anchor">#</a> Topic Branches</h2> <ul><li>a <em>short-lived</em> branch that you create and use for <em>a single particular</em> feature or related work</li> <li>are useful in projects <em>of any size</em> <ul><li>your work is <em>separated</em> into silos where all the changes in that branch have to do with that topic</li> <li>You can did a few commits on them and <em>deleted them directly</em> after merging them into your main branch.</li></ul></li> <li>For Example:
+<ul><li>you are doing some work (on <em>master</em>)</li> <li>branching off for an <em>issue</em> (iss91), working on it for a bit</li> <li>branching off the second branch to try another way of handling the same thing ( <em>iss91v2</em>)</li> <li>going back to your <em>master</em> branch and working there for a while</li> <li>and then branching off there to do some work that you’re not sure is a good idea (<em>dumbidea</em> branch).</li> <li>Your commit history will look something like this:
+<img src="/assets/img/Pasted-image-20230426153745.f969e35f.png" alt=""></li> <li>Now, let’s say you decide you like the second solution to your issue best (<em>iss91v2</em>); and you showed the <em>dumbidea</em> branch to your coworkers, and it turns out to be genius</li> <li>You can <em>throw away</em> the original <em>iss91</em> branch (losing commits C5 and C6) and merge in <em>the other two.</em></li> <li>Your history then looks like this:
+<img src="/assets/img/Pasted-image-20230426153854.86d33fc6.png" alt=""></li></ul></li></ul> <h1 id="remote-branches"><a href="#remote-branches" class="header-anchor">#</a> Remote Branches</h1></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#creating-a-new-branch" title="Creating a New Branch">Creating a New Branch</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#switch-branches" title="Switch Branches">Switch Branches</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#basic-branching" title="Basic Branching">Basic Branching</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#basic-merging" title="Basic Merging">Basic Merging</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#basic-merge-conflicts" title="Basic Merge Conflicts">Basic Merge Conflicts</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#changing-a-branch-name" title="changing a branch name">changing a branch name</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#change-a-master-branch-name" title="Change a master branch name">Change a master branch name</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#long-running-branches" title="Long-Running Branches">Long-Running Branches</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#topic-branches" title="Topic Branches">Topic Branches</a></div></div></div></div> <footer class="footer" data-v-60ffa98d><div class="footer-left-wrap" data-v-60ffa98d><ul class="contact" data-v-60ffa98d><li class="contact-item" data-v-60ffa98d><a href="https://github.com/PFCS33" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-60ffa98d><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-60ffa98d><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-60ffa98d></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-60ffa98d><ul class="copyright" data-v-60ffa98d><li class="copyright-item" data-v-60ffa98d><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-60ffa98d>Privacy Policy</a></li><li class="copyright-item" data-v-60ffa98d>MIT Licensed | Copyright © 2023-present pfcs</li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7ac337ed.js" defer></script><script src="/assets/js/9.a3b91e3f.js" defer></script><script src="/assets/js/4.2a0927de.js" defer></script><script src="/assets/js/6.155b7c80.js" defer></script>
+  </body>
+</html>
