@@ -13,7 +13,7 @@
   contents:
     - title: Master of Visual Computing
       institution: Simon Fraser University, Burnaby, BC, Canada
-      year: 2025 - 2027 (expected)
+      year: 2025 - Present
 
     - title: Bachelor of Science in Computer Science & Technology
       institution: Beijing Institute of Technology, Beijing, China
@@ -29,7 +29,6 @@
       year: 2024 - 2025
       description:
         - Worked on the development of online network planning platform.
-        - Technologies: Vue3, TypeScript, Node.js, Vite, Pinia, etc.
 
     - title: Software Engineer Intern
       institution: Dumiao Technology
