@@ -22,11 +22,11 @@ I bring `1 year+ full-time` frontend experience, where I led the development of 
 
 My technical foundation spans across:
 
-Frontend: Vue.js, D3.js, TypeScript, JavaScript
+- Frontend: Vue.js, D3.js, TypeScript, JavaScript
 
-Backend: Python, Java, Node.js, RESTful APIs
+- Backend: Python, Java, Node.js, RESTful APIs
 
-Core CS: C/C++, compiler design, operating systems
+- Core CS: C/C++, compiler design, operating systems
 
 I'm looking for `frontend`, `backend`, `full-stack`, or `ML engineering` roles` where I can contribute to impactful products. I work well in collaborative environments and enjoy solving challenging problems that create meaningful user experiences.
 Feel free to reach out—I'd love to connect and discuss opportunities!
