@@ -11,20 +11,35 @@
 - title: Education
   type: time_table
   contents:
+    - title: Master of Visual Computing
+        institution: Simon Fraser University, Burnaby, BC, Canada
+        year: 2025 - 2027 (expected)
+
     - title: Bachelor of Science in Computer Science & Technology
       institution: Beijing Institute of Technology, Beijing, China
       year: 2020 - 2024
       description:
-        - GPA 87.7/100
+        - GPA 87.7/100 (3.6/4.0)
 
 - title: Experience
   type: time_table
   contents:
+    - title: Frontend Engineer
+      institution: tp-link
+      year: 2024 - 2025
+      description:
+        - Worked on the development of online network planning platform.
+        - Technologies: Vue3, TypeScript, Node.js, Vite, Pinia, etc.
+
+    - title: Software Engineer Intern
+      institution: Dumiao Technology
+      year: 2024 
+
     - title: Research Assistant
-      institution: School of Computer Science & Technology, Beijing Institute of Technology
+      institution: Beijing Institute of Technology @LINK-VIS Group
       year: 2023 - 2024
       description:
-        - Work in Prof. Guozheng Li's LINK-VIS Group
+        - Two publications in IEEE TVCG (2024) and ACM UIST (2025).
 
 - title: Honors and Awards
   type: time_table
@@ -40,10 +55,11 @@
 - title: Academic Interests
   type: nested_list
   contents:
+    - items: Computer Vsion and Image Processing
     - items: Human–Computer Interaction
     - items: Artificial Intelligence-Driven Visual Analytics for Big Data
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Play computer games, especially crpgs😆.
+    - <u>Hobbies:</u> Play video games, especially crpgs😆. Like Baldur's Gate, Mass Effect, Dragon Age...

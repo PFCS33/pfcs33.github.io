@@ -2,25 +2,29 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://english.bit.edu.cn/'>BIT</a>. China, Beijing
+subtitle: <a href='https://www.sfu.ca'>SFU</a>. Burnaby, BC, Canada
 
 profile:
   align: right
   image: prof_pic.png
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Central Teaching Building, 1103</p>
-    <p>5 Zhongguancun South Street</p>
-    <p>Beijing, China</p>
 
 news: false # includes a list of news items
-latest_posts: true # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
+latest_posts: true # includes a list of the newest posts
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi!👋 Welcome to my academic page, where I share my journey, projects, and aspirations. I'm currently a fourth-year undergraduate student majoring in `Computer Science & Technology` at `BIT`.
+Hi!👋 Welcome to my personal page, where I share my journey, projects, and aspirations. I'm currently a `Master`'s student in `Visual Computing` at Simon Fraser University, actively seeking `Summer 2026 co-op` opportunities in `software development`/`data science`/`machine leaning`.
 
-My academic journey has been driven by a deep passion for `software engineering` and `web development`. Throughout my undergraduate years, I've dedicated myself to mastering `front-end` technologies and delving into the intricate world of `HCI & big data visualization`.
+I bring 1 year+ full-time frontend experience, where I led the development of 6+ core modules of company's network planning platform using Vue3 and TypeScript, with 100% completion rate. And My research work has also been published in top-tier venues including ACM UIST 2025 and IEEE TVCG 2024, focusing on visual analytics and data visualization systems. I completed my bachelor degree in Computer Science at Beijing Institute of Technology, with a solid CS background knowledge.
 
-I am now in the process of applying for a master's degree in Computer Science or Electrical and Computer Engineering in Canada, aiming to further my expertise and open new horizons in my professional journey.
+My technical foundation spans across:
+
+Frontend: Vue.js, D3.js, TypeScript, JavaScript
+Backend: Python, Java, Node.js, RESTful APIs
+Core CS: C/C++, compiler design, operating systems
+
+I'm looking for `frontend, backend, full-stack, or ML engineering roles` where I can contribute to impactful products. I work well in collaborative environments and enjoy solving challenging problems that create meaningful user experiences.
+Feel free to reach out—I'd love to connect and discuss opportunities!
