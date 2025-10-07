@@ -12,8 +12,8 @@
   type: time_table
   contents:
     - title: Master of Visual Computing
-        institution: Simon Fraser University, Burnaby, BC, Canada
-        year: 2025 - 2027 (expected)
+      institution: Simon Fraser University, Burnaby, BC, Canada
+      year: 2025 - 2027 (expected)
 
     - title: Bachelor of Science in Computer Science & Technology
       institution: Beijing Institute of Technology, Beijing, China
