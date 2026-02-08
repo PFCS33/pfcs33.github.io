@@ -198,6 +198,11 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  .profile-square {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -451,7 +456,7 @@ ul.task-list input[type="checkbox"] {
   }
 
   .contact-note {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
