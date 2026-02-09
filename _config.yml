@@ -4,13 +4,13 @@
 
 title: Y. Feng's Portfolio # the website title (if blank, full name will be used instead)
 first_name: Yunshan
-middle_name: 
+middle_name:
 last_name: Feng
 preferred_name: Cloud
 contact_note: >
   Best way to reach me is via email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-   Yunshan Feng's portfolio — Master of Visual Computing at SFU, Computer Science, Software Developer
+  Yunshan Feng's portfolio — Master of Visual Computing at SFU, Computer Science, Software Developer
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: # add your own keywords or leave empty

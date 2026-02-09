@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: 
+description:
 nav: true
 nav_order: 2
-display_categories: [Work, Research, 'Visual Computing Lab']
+display_categories: [Work, Research, "Visual Computing Lab"]
 horizontal: false
 ---
 

@@ -30,7 +30,10 @@ layout: default
     <header class="post-header">
       <h1 class="post-title">
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}{% if site.preferred_name %} <span style="font-size: 0.6em;">({{ site.preferred_name }})</span>{% endif %}
+        {{ site.last_name -}}
+        {%- if site.preferred_name %}
+          <span style="font-size: 0.6em;">({{ site.preferred_name }})</span>
+        {%- endif %}
       </h1>
 
       {% if page.subtitle %}
@@ -38,7 +41,9 @@ layout: default
       {% endif %}
 
       {% if page.address %}
-        <p style="font-size: 1rem; margin-top: 0.1rem; margin-bottom: 0;"><i class="fa-solid fa-location-dot" style="font-size: 0.9rem;"></i> {{ page.address }}</p>
+        <p style="font-size: 1rem; margin-top: 0.1rem; margin-bottom: 0;">
+          <i class="fa-solid fa-location-dot" style="font-size: 0.9rem;"></i> {{ page.address }}
+        </p>
       {% endif %}
 
       <!-- Social icons -->
@@ -62,7 +67,7 @@ layout: default
       {% endif %}
     </div>
 
-      <!-- Education -->
+    <!-- Education -->
     {% if page.education %}
       <h2>Education</h2>
       {% include education.liquid %}
@@ -105,7 +110,7 @@ layout: default
       </h2>
       <div class="projects">
         <div class="row row-cols-1 row-cols-md-3">
-          {% assign selected = site.projects | where: "selected", true | sort: "importance" %}
+          {% assign selected = site.projects | where: 'selected', true | sort: 'importance' %}
           {% for project in selected %}
             {% include projects.liquid %}
           {% endfor %}

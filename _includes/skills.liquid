@@ -7,7 +7,12 @@
         {% for item in cat.items %}
           <div class="skill-item">
             {% if item.icon %}
-              <img class="skill-icon" data-icon="{{ item.icon }}" src="https://skillicons.dev/icons?i={{ item.icon }}&theme=light" alt="{{ item.name }}">
+              <img
+                class="skill-icon"
+                data-icon="{{ item.icon }}"
+                src="https://skillicons.dev/icons?i={{ item.icon }}&theme=light"
+                alt="{{ item.name }}"
+              >
             {% elsif item.fa_icon %}
               <i class="{{ item.fa_icon }}"></i>
             {% endif %}
@@ -21,11 +26,11 @@
 
 <script>
   function updateSkillIconsTheme() {
-    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-    const theme = isDark ? "dark" : "light";
-    document.querySelectorAll(".skill-icon, .skill-icon-themed").forEach(function(img) {
-      const icon = img.getAttribute("data-icon");
-      img.src = "https://skillicons.dev/icons?i=" + icon + "&theme=" + theme;
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const theme = isDark ? 'dark' : 'light';
+    document.querySelectorAll('.skill-icon, .skill-icon-themed').forEach(function (img) {
+      const icon = img.getAttribute('data-icon');
+      img.src = 'https://skillicons.dev/icons?i=' + icon + '&theme=' + theme;
     });
   }
 
@@ -33,9 +38,9 @@
   updateSkillIconsTheme();
 
   // Watch for theme changes
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(m) {
-      if (m.attributeName === "data-theme") updateSkillIconsTheme();
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (m) {
+      if (m.attributeName === 'data-theme') updateSkillIconsTheme();
     });
   });
   observer.observe(document.documentElement, { attributes: true });

@@ -7,7 +7,10 @@
       <div class="org-details">
         <div class="org-name">{{ entry.title }}</div>
         <div class="org-info">{{ entry.company }}</div>
-        <div class="org-info-light">{{ entry.entries[0] }}{% if entry.address %} &nbsp;<i class="fa-solid fa-location-dot" style="font-size: 0.8rem;"></i> {{ entry.address }}{% endif %}</div>
+        <div class="org-info-light">
+          {{ entry.entries[0] -}}
+          {%- if entry.address %} &nbsp;<i class="fa-solid fa-location-dot" style="font-size: 0.8rem;"></i> {{ entry.address }}{% endif %}
+        </div>
         {% for line in entry.entries offset: 1 %}
           <div class="org-info">{{ line }}</div>
         {% endfor %}

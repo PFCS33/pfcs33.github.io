@@ -125,5 +125,3 @@ docker compose down
 rm Gemfile.lock
 docker compose up --build
 ```
-
-

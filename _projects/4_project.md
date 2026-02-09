@@ -25,6 +25,4 @@ tech:
     fa_icon: fa-solid fa-brain
   - name: Prompt Engineering
     fa_icon: fa-solid fa-terminal
-
-
 ---
