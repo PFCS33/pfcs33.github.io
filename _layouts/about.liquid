@@ -54,13 +54,7 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    <!-- Technical Skills -->
-    {% if page.skills %}
-      <h2>Skills</h2>
-      {% include skills.liquid %}
-    {% endif %}
-
-    <!-- Education -->
+      <!-- Education -->
     {% if page.education %}
       <h2>Education</h2>
       {% include education.liquid %}
@@ -71,6 +65,14 @@ layout: default
       <h2>Employment</h2>
       {% include employment.liquid %}
     {% endif %}
+
+    <!-- Technical Skills -->
+    {% if page.skills %}
+      <h2>Skills</h2>
+      {% include skills.liquid %}
+    {% endif %}
+
+
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}

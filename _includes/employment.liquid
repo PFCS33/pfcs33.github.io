@@ -1,14 +1,15 @@
-<div class="timeline">
+<ul class="org-list">
   {% for entry in site.data.employment %}
-    <div class="timeline-item">
-      <div class="timeline-date">{{ entry.date }}</div>
-      <div class="timeline-title">{{ entry.title }}</div>
-      {% if entry.company %}
-        <div class="timeline-subtitle">{{ entry.company }}</div>
+    <li class="org-item">
+      {% if entry.logo %}
+        <img class="org-logo" src="{{ '/assets/img/logos/' | append: entry.logo | relative_url }}" alt="{{ entry.company }}">
       {% endif %}
-      {% if entry.description %}
-        <div class="timeline-desc">{{ entry.description }}</div>
-      {% endif %}
-    </div>
+      <div class="org-details">
+        <div class="org-name">{{ entry.company }}</div>
+        {% for line in entry.entries %}
+          <div class="org-info">{{ line }}</div>
+        {% endfor %}
+      </div>
+    </li>
   {% endfor %}
-</div>
+</ul>

@@ -322,65 +322,53 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Timeline
-.timeline {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-top: 0.5rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: var(--global-theme-color);
-  }
+// Org list (education & employment)
+.org-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.timeline-item {
-  position: relative;
-  padding-bottom: 1.5rem;
+.org-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
 
   &:last-child {
-    padding-bottom: 0;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: -1.5rem;
-    top: 0.35rem;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--global-theme-color);
-    transform: translateX(-4px);
+    border-bottom: none;
   }
 }
 
-.timeline-date {
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
-  margin-bottom: 0.1rem;
+.org-logo {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  margin-right: 1.2rem;
+  object-fit: contain;
 }
 
-.timeline-title {
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin-bottom: 0.15rem;
-}
+.org-details {
+  flex: 1;
 
-.timeline-subtitle {
-  font-size: 0.9rem;
-  color: var(--global-text-color-light);
-  font-style: italic;
-  margin-bottom: 0.2rem;
-}
+  .org-name {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: var(--global-text-color);
+  }
 
-.timeline-desc {
-  font-size: 0.9rem;
+  .org-info {
+    font-size: 0.9rem;
+    color: var(--global-text-color);
+    margin-bottom: 0.1rem;
+  }
+
+  .org-info-light {
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.1rem;
+  }
 }
 
 // Navbar customization

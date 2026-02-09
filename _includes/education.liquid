@@ -1,14 +1,25 @@
-<div class="timeline">
+<ul class="org-list">
   {% for entry in site.data.education %}
-    <div class="timeline-item">
-      <div class="timeline-date">{{ entry.date }}</div>
-      <div class="timeline-title">{{ entry.title }}</div>
-      {% if entry.institution %}
-        <div class="timeline-subtitle">{{ entry.institution }}</div>
+    <li class="org-item">
+      {% if entry.logo %}
+        <img class="org-logo" src="{{ '/assets/img/logos/' | append: entry.logo | relative_url }}" alt="{{ entry.institution }}">
       {% endif %}
-      {% if entry.description %}
-        <div class="timeline-desc">{{ entry.description }}</div>
-      {% endif %}
-    </div>
+      <div class="org-details">
+        <div class="org-name">{{ entry.institution }}</div>
+        {% for line in entry.entries %}
+          <div class="org-info">{{ line }}</div>
+        {% endfor %}
+        {% if entry.gpa or entry.scholarship %}
+          <div class="org-info-light">
+            {% if entry.gpa %}{{ entry.gpa }}{% endif %}
+            {% if entry.gpa and entry.scholarship %} | {% endif %}
+            {% if entry.scholarship %}{{ entry.scholarship }}{% endif %}
+          </div>
+        {% endif %}
+        {% if entry.courses %}
+          <div class="org-info-light"><em>Courses:</em> {{ entry.courses }}</div>
+        {% endif %}
+      </div>
+    </li>
   {% endfor %}
-</div>
+</ul>
