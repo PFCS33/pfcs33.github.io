@@ -2,33 +2,35 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: "Master of Visual Computing · Computer Science · <a href='https://www.sfu.ca/' target='_blank'>SFU</a>"
+address: Burnaby, BC, Canada
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: prof_pic.png
+  image_shape: circle # circle | square | default (no crop)
+  # more_info: >
+  #   <p>555 your office number</p>
+  #   <p>123 your address street</p>
+  #   <p>Your City, State 12345</p>
+selected_papers: true
+selected_projects: true
+social: true
+skills: true
+education: true
+employment: true
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+# announcements:
+#   enabled: true
+#   scrollable: true
+#   limit: 5
 
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+# latest_posts:
+#   enabled: true
+#   scrollable: true
+#   limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I finished my **bachelor's degree in Computer Science** from [Beijing Institute of Technology](https://english.bit.edu.cn/). During my undergrad, I worked as a research assistant with [Prof. Guozheng Li](https://guozhengli2021.github.io/homepage/), developing interactive **data analytics and visualization tools**. After graduation, I worked for a year as a **frontend developer** building web applications. Now I'm a **Master of Visual Computing** student at [Simon Fraser University](https://www.sfu.ca/), diving deeper into **machine learning** and **computer vision** techniques.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Beyond work, I'm a big video game fan — CRPGs:game_die: are my favorite genre. I'm also currently learning to ski! :skier:

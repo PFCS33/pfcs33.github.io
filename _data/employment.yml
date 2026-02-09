@@ -1,0 +1,23 @@
+- title: Frontend Developer
+  company: TP-Link
+  address: Shenzhen, China
+  logo: tp-link.png # place in assets/img/logos/
+  entries:
+    - "2024/07 — 2025/07"
+    - "Delivered core features of <a href='https://www.omadanetworks.com/us/business-networking/software-tools/omada-design-hub/' target='_blank'>Omada Design Hub v1.0</a> using <u>Vue.js</u>, <u>TypeScript</u>, and <u>Jest</u>, following <u>Scrum</u> practices."
+
+- title: Software Developer Intern
+  company: Du Xiaoman Financial
+  address: Beijing, China
+  logo: duxiaoman.png # place in assets/img/logos/
+  entries:
+    - "04/2024 — 06/2024"
+    - "Built dynamic form validation for OA systems; followed team <u>Git</u> workflow with <u>PR reviews</u> and <u>CI/CD</u>; Improved CI pipeline by adding build error reporting in <u>Bash scripts</u>."
+
+- title: Research Assistant - AI & Data Analytics
+  company: Beijing Institute of Technology
+  address: Beijing, China
+  logo: bit.png # place in assets/img/logos/
+  entries:
+    - "07/2023 — 05/2024"
+    - "Built web-based visualization tools for high-quality data storytelling. Published in <a href='https://doi.org/10.1109/TVCG.2024.3388553' target='_blank'>IEEE TVCG 2024</a> (11.5%) and <a href='https://dl.acm.org/doi/10.1145/3746059.3747719' target='_blank'>ACM UIST 2025</a> (22%)."

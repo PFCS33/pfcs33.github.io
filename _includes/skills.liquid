@@ -1,0 +1,42 @@
+<div class="skills-grid">
+  {% for category in site.data.skills %}
+    {% assign cat = category[1] %}
+    <div class="skills-col">
+      <h3>{{ cat.title }}</h3>
+      <div class="skills-items">
+        {% for item in cat.items %}
+          <div class="skill-item">
+            {% if item.icon %}
+              <img class="skill-icon" data-icon="{{ item.icon }}" src="https://skillicons.dev/icons?i={{ item.icon }}&theme=light" alt="{{ item.name }}">
+            {% elsif item.fa_icon %}
+              <i class="{{ item.fa_icon }}"></i>
+            {% endif %}
+            <span>{{ item.name }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  function updateSkillIconsTheme() {
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    const theme = isDark ? "dark" : "light";
+    document.querySelectorAll(".skill-icon, .skill-icon-themed").forEach(function(img) {
+      const icon = img.getAttribute("data-icon");
+      img.src = "https://skillicons.dev/icons?i=" + icon + "&theme=" + theme;
+    });
+  }
+
+  // Run on load
+  updateSkillIconsTheme();
+
+  // Watch for theme changes
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.attributeName === "data-theme") updateSkillIconsTheme();
+    });
+  });
+  observer.observe(document.documentElement, { attributes: true });
+</script>

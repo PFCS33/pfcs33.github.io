@@ -1,0 +1,15 @@
+- institution: Simon Fraser University
+  logo: sfu.png # place in assets/img/logos/
+  entries:
+    - "MSc, Visual Computing, 2025 — Present"
+  gpa: "GPA: 4.33/4.33"
+  scholarship: # "e.g., Graduate Fellowship"
+  courses: "Machine Learning, Visual Computing Lab, Distributed and Cloud Systems"
+
+- institution: Beijing Institute of Technology
+  logo: bit.png # place in assets/img/logos/
+  entries:
+    - "BS, Computer Science, 2020 — 2024"
+  gpa: "GPA: 3.6/4.0"
+  scholarship: "6× Faculty Merit Scholarships"
+  courses: "Data Structures & Algorithms, OOP in C++, Database Systems, Computer Networks, Operating Systems"
