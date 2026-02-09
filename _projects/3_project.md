@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "CoInsight"
-description: Visual Storytelling for Hierarchical Tables With Connected Insights.
+description: Visual storytelling tool for hierarchical table insights.
 img: assets/img/coinsight.png
 importance: 1
 category: Research

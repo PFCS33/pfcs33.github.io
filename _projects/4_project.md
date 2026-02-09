@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "InReAcTable"
-description: LLM-powered Interactive Visual Data Story Construction from Tabular Data.
+description: An LLM-powered visual analytics system for data story construction, combining structural filtering with semantic reasoning.
 img: assets/img/reinactable.png
 importance: 2
 category: Research
