@@ -52,13 +52,15 @@ layout: default
       {% endif %}
     </header>
 
-    <div class="clearfix">{{ content }}</div>
-  
+    <div class="clearfix">
+      {{ content }}
+
       <!-- Technical Skills -->
-    {% if page.skills %}
-      <h2>Skills</h2>
-      {% include skills.liquid %}
-    {% endif %}
+      {% if page.skills %}
+        <h3>Skills</h3>
+        {% include skills.liquid %}
+      {% endif %}
+    </div>
 
       <!-- Education -->
     {% if page.education %}
