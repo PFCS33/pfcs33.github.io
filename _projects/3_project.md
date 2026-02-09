@@ -2,7 +2,7 @@
 layout: page
 title: "CoInsight"
 description: Visual Storytelling for Hierarchical Tables With Connected Insights.
-img: assets/img/publication_preview/coinsight.png
+img: assets/img/coinsight.png
 importance: 1
 category: Research
 tag: IEEE TVCG 2024
