@@ -4,7 +4,7 @@
   logo: tp-link.png # place in assets/img/logos/
   entries:
     - "2024/07 — 2025/07"
-    - "Delivered core features of <a href='https://www.omadanetworks.com/us/business-networking/software-tools/omada-design-hub/' target='_blank'>Omada Design Hub v1.0</a> using Vue.js, TypeScript, and Jest, following Scrum practices."
+    - "Delivered core features of <a href='https://www.omadanetworks.com/us/business-networking/software-tools/omada-design-hub/' target='_blank'>Omada Design Hub v1.0</a> using <u>Vue.js</u>, <u>TypeScript</u>, and <u>Jest</u>, following <u>Scrum</u> practices."
 
 - title: Software Developer Intern
   company: Du Xiaoman Financial
@@ -12,7 +12,7 @@
   logo: duxiaoman.png # place in assets/img/logos/
   entries:
     - "04/2024 — 06/2024"
-    - "Built dynamic form validation for OA systems; followed team Git workflow with PR reviews and CI/CD; Improved CI pipeline by adding build error reporting in Bash scripts."
+    - "Built dynamic form validation for OA systems; followed team <u>Git</u> workflow with <u>PR reviews</u> and <u>CI/CD</u>; Improved CI pipeline by adding build error reporting in <u>Bash scripts</u>."
 
 - title: Research Assistant - AI & Data Analytics
   company: Beijing Institute of Technology
