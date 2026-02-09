@@ -5,7 +5,7 @@ permalink: /projects/
 description: 
 nav: true
 nav_order: 2
-display_categories: [Work, 'Visual Computing Lab']
+display_categories: [Work, Research, 'Visual Computing Lab']
 horizontal: false
 ---
 

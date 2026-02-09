@@ -11,14 +11,14 @@ redirect: https://github.com/PFCS33/BitJumpPM-C
 tech:
   - name: Java
     icon: java
-  - name: JavaScript
-    icon: js
   - name: Spring Boot
     icon: spring
   - name: MySQL
     icon: mysql
   - name: Postman
     icon: postman
+  - name: JavaScript
+    icon: js
   - name: Vue.js
     icon: vue
   - name: WebSocket
