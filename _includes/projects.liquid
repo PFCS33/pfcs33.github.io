@@ -1,6 +1,9 @@
 <div class="col">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card h-100 hoverable">
+    <div class="card hoverable" style="position: relative;">
+      {% if project.tag %}
+        <span class="project-tag">{{ project.tag }}</span>
+      {% endif %}
       {% if project.img %}
         {%
           include figure.liquid
@@ -14,21 +17,20 @@
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
-        <div class="row ml-1 mr-1 p-0">
-          {% if project.github %}
-            <div class="github-icon">
-              <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-              </div>
-              {% if project.github_stars %}
-                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                  <i class="fa-solid fa-star"></i>
-                  <span id="{{ project.github_stars }}-stars"></span>
-                </span>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
+        {% if project.tech %}
+          <div class="project-tech">
+            {% for t in project.tech %}
+              <span class="tech-tag">
+                {% if t.icon %}
+                  <img class="tech-icon" src="https://skillicons.dev/icons?i={{ t.icon }}&theme=light" alt="{{ t.name }}">
+                {% elsif t.fa_icon %}
+                  <i class="{{ t.fa_icon }} tech-icon-fa"></i>
+                {% endif %}
+                {{ t.name }}
+              </span>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </a>
