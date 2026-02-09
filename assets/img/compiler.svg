@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340">
+  <defs>
+    <filter id="s">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#faf9f7" rx="12" />
+
+  <!-- === PIPELINE ARROW (background) === -->
+  <rect x="40" y="185" width="720" height="4" rx="2" fill="#e8e8e8" />
+
+  <!-- Arrow head -->
+  <polygon points="760,187 748,178 748,196" fill="#e8e8e8" />
+
+  <!-- === STAGE 1: SOURCE CODE === -->
+  <g filter="url(#s)">
+    <rect x="30" y="80" width="120" height="130" rx="10" fill="#fff" stroke="#8b5cf6" stroke-width="1.5" />
+    <rect x="42" y="92" width="96" height="18" rx="4" fill="#f5f3ff" />
+    <text x="90" y="105" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="9" font-weight="600">Source Code</text>
+
+    <!-- Mini code block -->
+    <rect x="42" y="118" width="96" height="76" rx="5" fill="#1e1e2e" />
+    <text x="50" y="133" fill="#c792ea" font-family="monospace" font-size="7">int</text>
+    <text x="64" y="133" fill="#82aaff" font-family="monospace" font-size="7">main</text>
+    <text x="88" y="133" fill="#89ddff" font-family="monospace" font-size="7">() {</text>
+    <text x="54" y="145" fill="#c792ea" font-family="monospace" font-size="7">int</text>
+    <text x="68" y="145" fill="#eeffff" font-family="monospace" font-size="7">a = </text>
+    <text x="88" y="145" fill="#f78c6c" font-family="monospace" font-size="7">5</text>
+    <text x="93" y="145" fill="#89ddff" font-family="monospace" font-size="7">;</text>
+    <text x="54" y="157" fill="#c792ea" font-family="monospace" font-size="7">int</text>
+    <text x="68" y="157" fill="#eeffff" font-family="monospace" font-size="7">b = </text>
+    <text x="88" y="157" fill="#f78c6c" font-family="monospace" font-size="7">3</text>
+    <text x="93" y="157" fill="#89ddff" font-family="monospace" font-size="7">;</text>
+    <text x="54" y="169" fill="#82aaff" font-family="monospace" font-size="7">return</text>
+    <text x="82" y="169" fill="#eeffff" font-family="monospace" font-size="7">a+b;</text>
+    <text x="50" y="181" fill="#89ddff" font-family="monospace" font-size="7">}</text>
+  </g>
+
+  <!-- Stage label -->
+  <text x="90" y="58" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="10" font-weight="600" letter-spacing="1">.c</text>
+
+  <!-- === STAGE 2: LEXER === -->
+  <g filter="url(#s)">
+    <rect x="185" y="90" width="110" height="120" rx="10" fill="#fff" stroke="#0ea5e9" stroke-width="1.5" />
+    <circle cx="205" cy="110" r="9" fill="#e0f2fe" />
+    <text x="205" y="114" text-anchor="middle" fill="#0ea5e9" font-family="system-ui" font-size="8" font-weight="700">L</text>
+    <text x="255" y="113" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Lexer</text>
+
+    <!-- Tokens -->
+    <rect x="197" y="125" width="32" height="14" rx="7" fill="#e0f2fe" />
+    <text x="213" y="135" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">INT</text>
+    <rect x="233" y="125" width="50" height="14" rx="7" fill="#e0f2fe" />
+    <text x="258" y="135" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">ID:main</text>
+    <rect x="197" y="143" width="22" height="14" rx="7" fill="#e0f2fe" />
+    <text x="208" y="153" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">( )</text>
+    <rect x="223" y="143" width="22" height="14" rx="7" fill="#e0f2fe" />
+    <text x="234" y="153" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">{ }</text>
+    <rect x="249" y="143" width="38" height="14" rx="7" fill="#e0f2fe" />
+    <text x="268" y="153" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">NUM:5</text>
+    <rect x="197" y="161" width="28" height="14" rx="7" fill="#e0f2fe" />
+    <text x="211" y="171" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">OP:+</text>
+    <rect x="229" y="161" width="38" height="14" rx="7" fill="#e0f2fe" />
+    <text x="248" y="171" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">NUM:3</text>
+    <rect x="197" y="179" width="42" height="14" rx="7" fill="#e0f2fe" />
+    <text x="218" y="189" text-anchor="middle" fill="#0369a1" font-family="monospace" font-size="6">RETURN</text>
+  </g>
+  <text x="240" y="58" text-anchor="middle" fill="#0ea5e9" font-family="system-ui" font-size="10" font-weight="600" letter-spacing="1">Tokens</text>
+
+  <!-- === STAGE 3: PARSER (AST) === -->
+  <g filter="url(#s)">
+    <rect x="330" y="80" width="120" height="130" rx="10" fill="#fff" stroke="#d4883a" stroke-width="1.5" />
+    <circle cx="350" cy="100" r="9" fill="#fef3e2" />
+    <text x="350" y="104" text-anchor="middle" fill="#d4883a" font-family="system-ui" font-size="8" font-weight="700">P</text>
+    <text x="405" y="103" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Parser</text>
+
+    <!-- AST tree -->
+    <circle cx="390" cy="130" r="10" fill="#fef9f0" stroke="#d4883a" stroke-width="1" />
+    <text x="390" y="134" text-anchor="middle" fill="#d4883a" font-family="monospace" font-size="7">fn</text>
+
+    <line x1="383" y1="140" x2="362" y2="158" stroke="#d4883a" stroke-width="1" />
+    <line x1="397" y1="140" x2="418" y2="158" stroke="#d4883a" stroke-width="1" />
+
+    <circle cx="362" cy="166" r="10" fill="#fef9f0" stroke="#d4883a" stroke-width="1" />
+    <text x="362" y="170" text-anchor="middle" fill="#d4883a" font-family="monospace" font-size="7">ret</text>
+
+    <circle cx="418" cy="166" r="10" fill="#fef9f0" stroke="#d4883a" stroke-width="1" />
+    <text x="418" y="170" text-anchor="middle" fill="#d4883a" font-family="monospace" font-size="7">+</text>
+
+    <line x1="411" y1="176" x2="398" y2="190" stroke="#d4883a" stroke-width="1" />
+    <line x1="425" y1="176" x2="438" y2="190" stroke="#d4883a" stroke-width="1" />
+
+    <circle cx="398" cy="196" r="8" fill="#fef9f0" stroke="#d4883a" stroke-width="1" />
+    <text x="398" y="199" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="7">a</text>
+
+    <circle cx="438" cy="196" r="8" fill="#fef9f0" stroke="#d4883a" stroke-width="1" />
+    <text x="438" y="199" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="7">b</text>
+  </g>
+  <text x="390" y="58" text-anchor="middle" fill="#d4883a" font-family="system-ui" font-size="10" font-weight="600" letter-spacing="1">AST</text>
+
+  <!-- === STAGE 4: IR Generation === -->
+  <g filter="url(#s)">
+    <rect x="485" y="85" width="120" height="125" rx="10" fill="#fff" stroke="#549162" stroke-width="1.5" />
+    <circle cx="505" cy="105" r="9" fill="#e8f5e9" />
+    <text x="505" y="109" text-anchor="middle" fill="#549162" font-family="system-ui" font-size="8" font-weight="700">IR</text>
+    <text x="558" y="108" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">IR Gen</text>
+
+    <!-- IR instructions -->
+    <rect x="497" y="120" width="96" height="14" rx="3" fill="#f0f8f1" />
+    <text x="545" y="130" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="7">t1 = 5</text>
+    <rect x="497" y="138" width="96" height="14" rx="3" fill="#f0f8f1" />
+    <text x="545" y="148" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="7">t2 = 3</text>
+    <rect x="497" y="156" width="96" height="14" rx="3" fill="#f0f8f1" />
+    <text x="545" y="166" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="7">t3 = t1 + t2</text>
+    <rect x="497" y="174" width="96" height="14" rx="3" fill="#f0f8f1" />
+    <text x="545" y="184" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="7">ret t3</text>
+  </g>
+  <text x="545" y="58" text-anchor="middle" fill="#549162" font-family="system-ui" font-size="10" font-weight="600" letter-spacing="1">3-Addr Code</text>
+
+  <!-- === STAGE 5: RISC-V Code Gen === -->
+  <g filter="url(#s)">
+    <rect x="640" y="80" width="130" height="130" rx="10" fill="#fff" stroke="#e17055" stroke-width="1.5" />
+    <circle cx="660" cy="100" r="9" fill="#fdecea" />
+    <text x="660" y="104" text-anchor="middle" fill="#e17055" font-family="system-ui" font-size="7" font-weight="700">RV</text>
+    <text x="720" y="103" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Code Gen</text>
+
+    <!-- RISC-V assembly -->
+    <rect x="652" y="115" width="106" height="82" rx="5" fill="#1e1e2e" />
+    <text x="660" y="129" fill="#c792ea" font-family="monospace" font-size="7">li</text>
+    <text x="674" y="129" fill="#eeffff" font-family="monospace" font-size="7">a0, 5</text>
+    <text x="660" y="142" fill="#c792ea" font-family="monospace" font-size="7">li</text>
+    <text x="674" y="142" fill="#eeffff" font-family="monospace" font-size="7">a1, 3</text>
+    <text x="660" y="155" fill="#c792ea" font-family="monospace" font-size="7">add</text>
+    <text x="680" y="155" fill="#eeffff" font-family="monospace" font-size="7">a0,a0,a1</text>
+    <text x="660" y="168" fill="#c792ea" font-family="monospace" font-size="7">mv</text>
+    <text x="676" y="168" fill="#eeffff" font-family="monospace" font-size="7">a0, a0</text>
+    <text x="660" y="181" fill="#c792ea" font-family="monospace" font-size="7">ret</text>
+  </g>
+  <text x="705" y="58" text-anchor="middle" fill="#e17055" font-family="system-ui" font-size="10" font-weight="600" letter-spacing="1">RISC-V</text>
+
+  <!-- === FLOW ARROWS between stages === -->
+  <!-- Source → Lexer -->
+  <polygon points="175,187 168,181 168,193" fill="#0ea5e9" opacity="0.6" />
+  <!-- Lexer → Parser -->
+  <polygon points="322,187 315,181 315,193" fill="#d4883a" opacity="0.6" />
+  <!-- Parser → IR -->
+  <polygon points="478,187 471,181 471,193" fill="#549162" opacity="0.6" />
+  <!-- IR → CodeGen -->
+  <polygon points="633,187 626,181 626,193" fill="#e17055" opacity="0.6" />
+
+  <!-- === BOTTOM: Implementation notes === -->
+  <g filter="url(#s)">
+    <rect x="80" y="260" width="180" height="65" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1" />
+    <circle cx="105" cy="280" r="8" fill="#f5f3ff" />
+    <text x="105" y="284" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="9" font-weight="700">C</text>
+    <text x="195" y="283" text-anchor="middle" fill="#555" font-family="system-ui" font-size="9" font-weight="500">C Language Input</text>
+    <text x="170" y="300" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">Subset of C99 standard</text>
+    <text x="170" y="313" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">Variables, expressions, control flow</text>
+  </g>
+
+  <g filter="url(#s)">
+    <rect x="310" y="260" width="180" height="65" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1" />
+    <circle cx="335" cy="280" r="8" fill="#fef3e2" />
+    <text x="335" y="284" text-anchor="middle" fill="#d4883a" font-family="system-ui" font-size="8" font-weight="700">J</text>
+    <text x="415" y="283" text-anchor="middle" fill="#555" font-family="system-ui" font-size="9" font-weight="500">Java Implementation</text>
+    <text x="400" y="300" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">OOP design with visitor pattern</text>
+    <text x="400" y="313" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">Modular compiler phases</text>
+  </g>
+
+  <g filter="url(#s)">
+    <rect x="540" y="260" width="180" height="65" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1" />
+    <circle cx="565" cy="280" r="8" fill="#fdecea" />
+    <text x="565" y="283" text-anchor="middle" fill="#e17055" font-family="system-ui" font-size="7" font-weight="700">RV</text>
+    <text x="645" y="283" text-anchor="middle" fill="#555" font-family="system-ui" font-size="9" font-weight="500">RISC-V Target</text>
+    <text x="630" y="300" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">RV32I base instruction set</text>
+    <text x="630" y="313" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">Register allocation + output</text>
+  </g>
+
+</svg>

@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440">
+  <defs>
+    <filter id="s">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#f4f7f5" rx="12" />
+
+  <!-- Subtle dot pattern -->
+  <g fill="#ccc" opacity="0.3">
+    <circle cx="20" cy="20" r="1" /><circle cx="60" cy="20" r="1" /><circle cx="100" cy="20" r="1" /><circle cx="140" cy="20" r="1" /><circle cx="180" cy="20" r="1" /><circle cx="220" cy="20" r="1" /><circle cx="260" cy="20" r="1" /><circle cx="300" cy="20" r="1" /><circle cx="340" cy="20" r="1" /><circle cx="380" cy="20" r="1" /><circle cx="420" cy="20" r="1" /><circle cx="460" cy="20" r="1" /><circle cx="500" cy="20" r="1" /><circle cx="540" cy="20" r="1" /><circle cx="580" cy="20" r="1" /><circle cx="620" cy="20" r="1" /><circle cx="660" cy="20" r="1" /><circle cx="700" cy="20" r="1" /><circle cx="740" cy="20" r="1" /><circle cx="780" cy="20" r="1" />
+    <circle cx="20" cy="60" r="1" /><circle cx="60" cy="60" r="1" /><circle cx="100" cy="60" r="1" /><circle cx="140" cy="60" r="1" /><circle cx="180" cy="60" r="1" /><circle cx="220" cy="60" r="1" /><circle cx="260" cy="60" r="1" /><circle cx="300" cy="60" r="1" /><circle cx="340" cy="60" r="1" /><circle cx="380" cy="60" r="1" /><circle cx="420" cy="60" r="1" /><circle cx="460" cy="60" r="1" /><circle cx="500" cy="60" r="1" /><circle cx="540" cy="60" r="1" /><circle cx="580" cy="60" r="1" /><circle cx="620" cy="60" r="1" /><circle cx="660" cy="60" r="1" /><circle cx="700" cy="60" r="1" /><circle cx="740" cy="60" r="1" /><circle cx="780" cy="60" r="1" />
+    <circle cx="20" cy="100" r="1" /><circle cx="60" cy="100" r="1" /><circle cx="100" cy="100" r="1" /><circle cx="140" cy="100" r="1" /><circle cx="180" cy="100" r="1" /><circle cx="220" cy="100" r="1" /><circle cx="260" cy="100" r="1" /><circle cx="300" cy="100" r="1" /><circle cx="340" cy="100" r="1" /><circle cx="380" cy="100" r="1" /><circle cx="420" cy="100" r="1" /><circle cx="460" cy="100" r="1" /><circle cx="500" cy="100" r="1" /><circle cx="540" cy="100" r="1" /><circle cx="580" cy="100" r="1" /><circle cx="620" cy="100" r="1" /><circle cx="660" cy="100" r="1" /><circle cx="700" cy="100" r="1" /><circle cx="740" cy="100" r="1" /><circle cx="780" cy="100" r="1" />
+  </g>
+
+  <!-- === STAGE LABELS === -->
+  <text x="75" y="48" text-anchor="middle" fill="#888" font-family="system-ui, sans-serif" font-size="11" font-weight="500" letter-spacing="2">INPUT</text>
+  <text x="270" y="48" text-anchor="middle" fill="#d4883a" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="2">MAP</text>
+  <text x="420" y="48" text-anchor="middle" fill="#888" font-family="system-ui, sans-serif" font-size="11" font-weight="500" letter-spacing="2">SHUFFLE</text>
+  <text x="570" y="48" text-anchor="middle" fill="#549162" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="2">REDUCE</text>
+  <text x="720" y="48" text-anchor="middle" fill="#6366f1" font-family="system-ui, sans-serif" font-size="11" font-weight="500" letter-spacing="2">STORE</text>
+
+  <!-- Stage dividers -->
+  <line x1="170" y1="35" x2="170" y2="430" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4" />
+  <line x1="345" y1="35" x2="345" y2="430" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4" />
+  <line x1="495" y1="35" x2="495" y2="430" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4" />
+  <line x1="645" y1="35" x2="645" y2="430" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4" />
+
+  <!-- === INPUT: Document icons === -->
+  <g filter="url(#s)">
+    <rect x="35" y="85" width="80" height="56" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1" />
+    <rect x="45" y="95" width="38" height="4" rx="2" fill="#ccc" />
+    <rect x="45" y="103" width="58" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="110" width="50" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="117" width="55" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="124" width="30" height="3" rx="1.5" fill="#e8e8e8" />
+    <text x="75" y="132" text-anchor="middle" fill="#aaa" font-family="monospace" font-size="6">doc_01</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="35" y="160" width="80" height="56" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1" />
+    <rect x="45" y="170" width="42" height="4" rx="2" fill="#ccc" />
+    <rect x="45" y="178" width="58" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="185" width="48" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="192" width="55" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="199" width="35" height="3" rx="1.5" fill="#e8e8e8" />
+    <text x="75" y="207" text-anchor="middle" fill="#aaa" font-family="monospace" font-size="6">doc_02</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="35" y="235" width="80" height="56" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1" />
+    <rect x="45" y="245" width="35" height="4" rx="2" fill="#ccc" />
+    <rect x="45" y="253" width="58" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="260" width="52" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="267" width="55" height="3" rx="1.5" fill="#e8e8e8" />
+    <rect x="45" y="274" width="40" height="3" rx="1.5" fill="#e8e8e8" />
+    <text x="75" y="282" text-anchor="middle" fill="#aaa" font-family="monospace" font-size="6">doc_03</text>
+  </g>
+
+  <!-- === MAPPERS === -->
+  <g filter="url(#s)">
+    <rect x="195" y="75" width="150" height="80" rx="10" fill="#fff" stroke="#d4883a" stroke-width="1.5" />
+    <circle cx="215" cy="95" r="10" fill="#fef3e2" />
+    <text x="215" y="99" text-anchor="middle" fill="#d4883a" font-family="system-ui" font-size="10" font-weight="700">M1</text>
+    <text x="290" y="95" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Mapper 1</text>
+    <rect x="210" y="110" width="120" height="16" rx="4" fill="#fef9f0" />
+    <text x="270" y="122" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="8">"hadoop" → 1</text>
+    <rect x="210" y="130" width="120" height="16" rx="4" fill="#fef9f0" />
+    <text x="270" y="142" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="8">"index"  → 1</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="195" y="175" width="150" height="80" rx="10" fill="#fff" stroke="#d4883a" stroke-width="1.5" />
+    <circle cx="215" cy="195" r="10" fill="#fef3e2" />
+    <text x="215" y="199" text-anchor="middle" fill="#d4883a" font-family="system-ui" font-size="10" font-weight="700">M2</text>
+    <text x="290" y="195" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Mapper 2</text>
+    <rect x="210" y="210" width="120" height="16" rx="4" fill="#fef9f0" />
+    <text x="270" y="222" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="8">"java"   → 1</text>
+    <rect x="210" y="230" width="120" height="16" rx="4" fill="#fef9f0" />
+    <text x="270" y="242" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="8">"mapred" → 1</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="195" y="275" width="150" height="80" rx="10" fill="#fff" stroke="#d4883a" stroke-width="1.5" />
+    <circle cx="215" cy="295" r="10" fill="#fef3e2" />
+    <text x="215" y="299" text-anchor="middle" fill="#d4883a" font-family="system-ui" font-size="10" font-weight="700">M3</text>
+    <text x="290" y="295" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Mapper 3</text>
+    <rect x="210" y="310" width="120" height="16" rx="4" fill="#fef9f0" />
+    <text x="270" y="322" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="8">"hbase"  → 1</text>
+    <rect x="210" y="330" width="120" height="16" rx="4" fill="#fef9f0" />
+    <text x="270" y="342" text-anchor="middle" fill="#b07830" font-family="monospace" font-size="8">"hadoop" → 1</text>
+  </g>
+
+  <!-- === SHUFFLE: crossing arrows icon === -->
+  <g opacity="0.6">
+    <path d="M370 120 Q420 180 370 240" fill="none" stroke="#aaa" stroke-width="1.5" />
+    <path d="M370 200 Q420 260 370 320" fill="none" stroke="#aaa" stroke-width="1.5" />
+    <path d="M470 120 Q420 180 470 240" fill="none" stroke="#aaa" stroke-width="1.5" />
+    <path d="M470 200 Q420 260 470 320" fill="none" stroke="#aaa" stroke-width="1.5" />
+  </g>
+  <rect x="397" y="205" width="46" height="22" rx="6" fill="#f0f0f0" stroke="#ccc" stroke-width="1" />
+  <text x="420" y="220" text-anchor="middle" fill="#999" font-family="system-ui" font-size="8" font-weight="500">sort</text>
+
+  <!-- === REDUCERS === -->
+  <g filter="url(#s)">
+    <rect x="500" y="105" width="140" height="90" rx="10" fill="#fff" stroke="#549162" stroke-width="1.5" />
+    <circle cx="520" cy="125" r="10" fill="#e8f5e9" />
+    <text x="520" y="129" text-anchor="middle" fill="#549162" font-family="system-ui" font-size="10" font-weight="700">R1</text>
+    <text x="590" y="125" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Reducer 1</text>
+    <rect x="515" y="140" width="110" height="16" rx="4" fill="#f0f8f1" />
+    <text x="570" y="152" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="8">"hadoop"→[d1,d3]</text>
+    <rect x="515" y="160" width="110" height="16" rx="4" fill="#f0f8f1" />
+    <text x="570" y="172" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="8">"hbase" →[d3]</text>
+  </g>
+  <g filter="url(#s)">
+    <rect x="500" y="225" width="140" height="90" rx="10" fill="#fff" stroke="#549162" stroke-width="1.5" />
+    <circle cx="520" cy="245" r="10" fill="#e8f5e9" />
+    <text x="520" y="249" text-anchor="middle" fill="#549162" font-family="system-ui" font-size="10" font-weight="700">R2</text>
+    <text x="590" y="245" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">Reducer 2</text>
+    <rect x="515" y="260" width="110" height="16" rx="4" fill="#f0f8f1" />
+    <text x="570" y="272" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="8">"index" →[d1,d2]</text>
+    <rect x="515" y="280" width="110" height="16" rx="4" fill="#f0f8f1" />
+    <text x="570" y="292" text-anchor="middle" fill="#3d7a4a" font-family="monospace" font-size="8">"java"  →[d2]</text>
+  </g>
+
+  <!-- === HBASE OUTPUT === -->
+  <g filter="url(#s)">
+    <rect x="660" y="100" width="120" height="230" rx="10" fill="#fff" stroke="#6366f1" stroke-width="1.5" />
+    <rect x="672" y="112" width="96" height="22" rx="5" fill="#eef2ff" />
+    <text x="720" y="127" text-anchor="middle" fill="#6366f1" font-family="system-ui" font-size="11" font-weight="600">HBase</text>
+    <text x="720" y="150" text-anchor="middle" fill="#999" font-family="system-ui" font-size="8">Inverted Index Table</text>
+
+    <!-- Table header -->
+    <rect x="672" y="162" width="48" height="16" rx="3" fill="#eef2ff" />
+    <text x="696" y="174" text-anchor="middle" fill="#6366f1" font-family="monospace" font-size="7" font-weight="600">Key</text>
+    <rect x="724" y="162" width="48" height="16" rx="3" fill="#eef2ff" />
+    <text x="748" y="174" text-anchor="middle" fill="#6366f1" font-family="monospace" font-size="7" font-weight="600">Docs</text>
+
+    <!-- Table rows -->
+    <rect x="672" y="182" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="696" y="194" text-anchor="middle" fill="#555" font-family="monospace" font-size="7">hadoop</text>
+    <rect x="724" y="182" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="748" y="194" text-anchor="middle" fill="#7DBB8D" font-family="monospace" font-size="7">d1, d3</text>
+
+    <rect x="672" y="202" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="696" y="214" text-anchor="middle" fill="#555" font-family="monospace" font-size="7">hbase</text>
+    <rect x="724" y="202" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="748" y="214" text-anchor="middle" fill="#7DBB8D" font-family="monospace" font-size="7">d3</text>
+
+    <rect x="672" y="222" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="696" y="234" text-anchor="middle" fill="#555" font-family="monospace" font-size="7">index</text>
+    <rect x="724" y="222" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="748" y="234" text-anchor="middle" fill="#7DBB8D" font-family="monospace" font-size="7">d1, d2</text>
+
+    <rect x="672" y="242" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="696" y="254" text-anchor="middle" fill="#555" font-family="monospace" font-size="7">java</text>
+    <rect x="724" y="242" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="748" y="254" text-anchor="middle" fill="#7DBB8D" font-family="monospace" font-size="7">d2</text>
+
+    <rect x="672" y="262" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="696" y="274" text-anchor="middle" fill="#555" font-family="monospace" font-size="7">mapred</text>
+    <rect x="724" y="262" width="48" height="16" rx="3" fill="#fafafa" />
+    <text x="748" y="274" text-anchor="middle" fill="#7DBB8D" font-family="monospace" font-size="7">d2</text>
+  </g>
+
+  <!-- === FLOW ARROWS === -->
+  <!-- Input → Mappers -->
+  <path d="M115 113 L195 115" fill="none" stroke="#ccc" stroke-width="1.5" marker-end="url(#arr)" />
+  <path d="M115 188 L195 215" fill="none" stroke="#ccc" stroke-width="1.5" />
+  <path d="M115 263 L195 315" fill="none" stroke="#ccc" stroke-width="1.5" />
+
+  <!-- Reducers → HBase -->
+  <path d="M640 150 L660 150" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.5" />
+  <path d="M640 270 L660 270" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.5" />
+
+  <!-- === NAMENODE (top center) === -->
+  <g filter="url(#s)">
+    <rect x="340" y="375" width="160" height="50" rx="10" fill="#fff" stroke="#e17055" stroke-width="1.5" />
+    <circle cx="365" cy="400" r="10" fill="#fdecea" />
+    <text x="365" y="404" text-anchor="middle" fill="#e17055" font-family="system-ui" font-size="10" font-weight="700">N</text>
+    <text x="440" y="396" text-anchor="middle" fill="#555" font-family="system-ui" font-size="10" font-weight="500">NameNode</text>
+    <text x="440" y="412" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="8">Job Coordinator</text>
+  </g>
+
+  <!-- NameNode lines -->
+  <line x1="380" y1="375" x2="270" y2="355" stroke="#e17055" stroke-width="1" stroke-dasharray="3,3" opacity="0.35" />
+  <line x1="420" y1="375" x2="420" y2="355" stroke="#e17055" stroke-width="1" stroke-dasharray="3,3" opacity="0" />
+  <line x1="460" y1="375" x2="570" y2="315" stroke="#e17055" stroke-width="1" stroke-dasharray="3,3" opacity="0.35" />
+
+  <!-- === BOTTOM: VM cluster icons === -->
+  <g opacity="0.5">
+    <rect x="80" y="400" width="65" height="30" rx="6" fill="#fff" stroke="#ddd" stroke-width="1" />
+    <text x="112" y="420" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">Linux VM 1</text>
+    <rect x="155" y="400" width="65" height="30" rx="6" fill="#fff" stroke="#ddd" stroke-width="1" />
+    <text x="187" y="420" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">Linux VM 2</text>
+    <rect x="230" y="400" width="65" height="30" rx="6" fill="#fff" stroke="#ddd" stroke-width="1" />
+    <text x="262" y="420" text-anchor="middle" fill="#aaa" font-family="system-ui" font-size="7">Linux VM 3</text>
+  </g>
+
+</svg>
