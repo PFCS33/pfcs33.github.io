@@ -98,6 +98,21 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Selected projects -->
+    {% if page.selected_projects %}
+      <h2>
+        <a href="{{ '/projects/' | relative_url }}" style="color: inherit">selected projects</a>
+      </h2>
+      <div class="projects">
+        <div class="row row-cols-1 row-cols-md-3">
+          {% assign selected = site.projects | where: "selected", true | sort: "importance" %}
+          {% for project in selected %}
+            {% include projects.liquid %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
