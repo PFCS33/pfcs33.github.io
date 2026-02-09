@@ -38,12 +38,12 @@ layout: default
       {% endif %}
 
       {% if page.address %}
-        <p style="font-size: 1rem; margin-top: 0.1rem; margin-bottom: 0;">{{ page.address }}</p>
+        <p style="font-size: 1rem; margin-top: 0.1rem; margin-bottom: 0;"><i class="fa-solid fa-location-dot" style="font-size: 0.9rem;"></i> {{ page.address }}</p>
       {% endif %}
 
       <!-- Social icons -->
       {% if page.social %}
-        <div class="social" style="margin-top: 0.5rem; margin-bottom: 1rem; text-align: left;">
+        <div class="social" style="margin-top: 0.5rem; margin-bottom: 1.2rem; text-align: left;">
           <div class="contact-icons" style="font-size: 2.5rem;">{% social_links %}</div>
           {% if site.contact_note %}
             <div class="contact-note">{{ site.contact_note }}</div>

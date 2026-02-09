@@ -13,7 +13,6 @@ profile:
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
   #   <p>Your City, State 12345</p>
-
 selected_papers: true
 social: true
 
@@ -28,6 +27,6 @@ latest_posts:
   limit: 3
 ---
 
-I earned my bachelor's degree in [Your Field] from [Your University]. After graduating, I spent a year working as a [Your Role] at [Your Company], where I gained hands-on experience in [brief description of work]. I am now pursuing a Master of Visual Computing in Computer Science at Simon Fraser University, where my research focuses on [your research interests].
+I finished my **bachelor's degree in Computer Science** from [Beijing Institute of Technology](https://english.bit.edu.cn/). During my undergrad, I worked as a research assistant with [Prof. Guozheng Li](https://guozhengli2021.github.io/homepage/), developing interactive **data analytics and visualization tools**. After graduation, I worked for a year as a **frontend developer** building web applications. Now I am pursuing a **Master of Visual Computing** at [Simon Fraser University](https://www.sfu.ca/), diving deeper into **machine learning** and **computer vision** techniques.
 
-Outside of work, I enjoy [your hobbies, e.g., hiking, photography, reading, gaming]. I am also passionate about [another interest, e.g., open-source projects, creative coding, traveling].
+Beyond work, I'm a big video game fan — CRPGs:game_die: are my favorite genre. I'm also currently learning to ski! :skier:
