@@ -1,8 +1,13 @@
 <div class="col">
-  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+  {% if project.redirect %}
+  <a href="{{ project.redirect }}">
+  {% endif %}
     <div class="card hoverable" style="position: relative;">
       {% if project.tag %}
         <span class="project-tag">{{ project.tag }}</span>
+      {% endif %}
+      {% if project.redirect contains 'github.com' %}
+        <span class="project-github-tag"><i class="fa-brands fa-github"></i></span>
       {% endif %}
       {% if project.img %}
         {%
@@ -22,7 +27,7 @@
             {% for t in project.tech %}
               <span class="tech-tag">
                 {% if t.icon %}
-                  <img class="tech-icon" src="https://skillicons.dev/icons?i={{ t.icon }}&theme=light" alt="{{ t.name }}">
+                  <img class="tech-icon skill-icon-themed" src="https://skillicons.dev/icons?i={{ t.icon }}&theme=light" data-icon="{{ t.icon }}" alt="{{ t.name }}">
                 {% elsif t.fa_icon %}
                   <i class="{{ t.fa_icon }} tech-icon-fa"></i>
                 {% endif %}
@@ -33,5 +38,7 @@
         {% endif %}
       </div>
     </div>
+  {% if project.redirect %}
   </a>
+  {% endif %}
 </div>

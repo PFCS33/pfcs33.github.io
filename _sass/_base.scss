@@ -828,6 +828,19 @@ footer.sticky-bottom {
     color: #fff;
   }
 
+  .project-github-tag {
+    position: absolute;
+    top: 2.2rem;
+    left: -0.3rem;
+    z-index: 1;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+  }
+
   .card {
     img {
       width: 100%;

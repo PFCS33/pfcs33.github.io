@@ -23,7 +23,7 @@
   function updateSkillIconsTheme() {
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
     const theme = isDark ? "dark" : "light";
-    document.querySelectorAll(".skill-icon").forEach(function(img) {
+    document.querySelectorAll(".skill-icon, .skill-icon-themed").forEach(function(img) {
       const icon = img.getAttribute("data-icon");
       img.src = "https://skillicons.dev/icons?i=" + icon + "&theme=" + theme;
     });
