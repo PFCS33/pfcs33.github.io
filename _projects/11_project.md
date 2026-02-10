@@ -6,7 +6,7 @@ img: assets/img/ssd.png
 importance: 9
 category: "Visual Computing Lab"
 tag: Machine Learning
-selected: false
+selected: true
 redirect: https://github.com/PFCS33/ssd-object-detection
 tech:
   - name: Convolutional Neural Network
