@@ -10,7 +10,7 @@ selected: false
 redirect: https://github.com/PFCS33/unet-cell-segmentation
 tech:
   - name: Convolutional Neural Network
-    fa_icon: fa-solid fa-layer-group 
+    fa_icon: fa-solid fa-layer-group
   - name: Image Segmentation
     fa_icon: fa-solid fa-crop-simple
   - name: PyTorch

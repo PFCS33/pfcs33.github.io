@@ -21,7 +21,9 @@ horizontal: false
   </div>
 
   <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
+
+{% for category in page.display_categories %}
+
   <div class="project-category-group" data-group="{{ category }}">
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
