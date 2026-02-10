@@ -9,12 +9,12 @@ tag: Machine Learning
 selected: false
 redirect: https://github.com/PFCS33/unet-cell-segmentation
 tech:
-  - name: Neural Network
-    fa_icon: fa-solid fa-brain
-  - name: PyTorch
-    icon: pytorch
+  - name: Convolutional Neural Network
+    fa_icon: fa-solid fa-layer-group 
   - name: Image Segmentation
     fa_icon: fa-solid fa-crop-simple
+  - name: PyTorch
+    icon: pytorch
   - name: TensorFlow
     icon: tensorflow
   - name: Python
