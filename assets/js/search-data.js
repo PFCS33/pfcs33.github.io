@@ -23,9 +23,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "projects-bingo-multi-item-waste-sorting-app",
-          title: 'BinGo: Multi-Item Waste Sorting App',
-          description: "An ML-based Android application for real-time multi-item waste detection with direct bin assignment output.",
+        },{id: "projects-u-net-cell-segmentation",
+          title: 'U-Net Cell Segmentation',
+          description: "U-Net built from scratch in PyTorch for cell segmentation on BMMC microscopy data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project/";
+            },},{id: "projects-ssd-object-detection",
+          title: 'SSD Object Detection',
+          description: "PyTorch implementation of Single Shot MultiBox Detector for real-time object detection.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_project/";
+            },},{id: "projects-bingo-real-time-multi-item-waste-sorting-app",
+          title: 'BinGo: Real-Time Multi-Item Waste Sorting App',
+          description: "An Android app for real-time multi-item waste sorting with direct bin assignment output, supported by ML-based object detection model.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-bitjump-manager",
@@ -63,6 +73,11 @@ ninja.data = [{
           description: "A single-cycle RISC-V CPU implementation supporting RV32I base instruction set with datapath and control unit design.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
+            },},{id: "projects-poisson-image-blending",
+          title: 'Poisson Image Blending',
+          description: "Seamless image cloning and reconstruction from derivatives using sparse Poisson solvers.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
             },},{
         id: 'social-email',
         title: 'email',
