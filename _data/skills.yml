@@ -39,6 +39,8 @@ frameworks:
       icon: d3
     - name: PyTorch
       icon: pytorch
+    - name: TensorFlow
+      icon: tensorflow
     - name: Flask
       icon: flask
     - name: Express

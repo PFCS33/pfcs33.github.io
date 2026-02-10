@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "BinGo: Multi-Item Waste Sorting App"
-description: An ML-based Android application for real-time multi-item waste detection with direct bin assignment output.
+title: "BinGo: Real-Time Multi-Item Waste Sorting App"
+description: An Android app for real-time multi-item waste sorting with direct bin assignment output, supported by ML-based object detection model.
 img: assets/img/bingo.gif
 importance: 1
 category: Work
