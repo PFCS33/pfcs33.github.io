@@ -33,6 +33,11 @@ ninja.data = [{
           description: "PyTorch implementation of Single Shot MultiBox Detector for real-time object detection.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/11_project/";
+            },},{id: "projects-epipolar-geometry-amp-fundamental-matrix",
+          title: 'Epipolar Geometry &amp;amp; Fundamental Matrix',
+          description: "Fundamental matrix estimation for stereo vision using the normalized 8-point algorithm and RANSAC.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_project/";
             },},{id: "projects-bingo-real-time-multi-item-waste-sorting-app",
           title: 'BinGo: Real-Time Multi-Item Waste Sorting App',
           description: "An Android app for real-time multi-item waste sorting with direct bin assignment output, supported by ML-based object detection model.",
