@@ -9,16 +9,10 @@ tag: Computer Network
 selected: false
 redirect: https://github.com/PFCS33/A-CGI-Support-Multi-Threaded-Web-Server
 tech:
-  - name: Python
-    icon: py
-  - name: TCP
-    fa_icon: fa-solid fa-network-wired
-  - name: Socket
-    fa_icon: fa-solid fa-plug
-  - name: SQLite
-    icon: sqlite
-  - name: HTML
-    icon: html
-  - name: CSS
-    icon: css
+  - python
+  - tcp
+  - socket
+  - sqlite
+  - html
+  - css
 ---

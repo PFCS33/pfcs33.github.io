@@ -1,3 +1,22 @@
+<script>
+  var deviconMap = {
+    {% for entry in site.data.icons %}
+      {% assign key = entry[0] %}
+      {% assign val = entry[1] %}
+      {% if val.skillicon and val.devicon %}
+        '{{ val.skillicon }}': '{{ val.devicon }}',
+      {% endif %}
+    {% endfor %}
+  };
+
+  function skillIconFallback(img) {
+    img.onerror = null;
+    var icon = img.dataset.icon;
+    var mapped = deviconMap[icon] || icon;
+    img.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/' + mapped + '/' + mapped + '-original.svg';
+  }
+</script>
+
 <div class="skills-grid">
   {% for category in site.data.skills %}
     {% assign cat = category[1] %}
@@ -5,18 +24,20 @@
       <h3>{{ cat.title }}</h3>
       <div class="skills-items">
         {% for item in cat.items %}
+          {% assign info = site.data.icons[item] %}
           <div class="skill-item">
-            {% if item.icon %}
+            {% if info.skillicon %}
               <img
                 class="skill-icon"
-                data-icon="{{ item.icon }}"
-                src="https://skillicons.dev/icons?i={{ item.icon }}&theme=light"
-                alt="{{ item.name }}"
+                data-icon="{{ info.skillicon }}"
+                src="https://skillicons.dev/icons?i={{ info.skillicon }}&theme=light"
+                alt="{{ info.label }}"
+                onerror="skillIconFallback(this);"
               >
-            {% elsif item.fa_icon %}
-              <i class="{{ item.fa_icon }}"></i>
+            {% elsif info.fa_icon %}
+              <i class="{{ info.fa_icon }}"></i>
             {% endif %}
-            <span>{{ item.name }}</span>
+            <span>{{ info.label }}</span>
           </div>
         {% endfor %}
       </div>
@@ -30,6 +51,9 @@
     const theme = isDark ? 'dark' : 'light';
     document.querySelectorAll('.skill-icon, .skill-icon-themed').forEach(function (img) {
       const icon = img.getAttribute('data-icon');
+      img.onerror = function () {
+        skillIconFallback(this);
+      };
       img.src = 'https://skillicons.dev/icons?i=' + icon + '&theme=' + theme;
     });
   }

@@ -9,10 +9,7 @@ tag: Computer Architecture
 selected: false
 redirect: https://github.com/PFCS33/single-cycle-cpu-RISCV
 tech:
-  - name: RISC-V
-    fa_icon: fa-solid fa-microchip
-  - name: Verilog
-    fa_icon: fa-solid fa-memory
-  - name: Digital Logic
-    fa_icon: fa-solid fa-diagram-project
+  - riscv
+  - verilog
+  - digital_logic
 ---

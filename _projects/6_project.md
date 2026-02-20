@@ -8,12 +8,7 @@ category: Work
 tag: Big Data
 selected: false
 tech:
-  - name: Java
-    icon: java
-  - name: Hadoop
-    fa_icon: fa-solid fa-database
-  - name: HBase
-    fa_icon: fa-solid fa-table-cells
-  - name: Linux
-    icon: linux
+  - java
+  - hadoop
+  - hbase
 ---

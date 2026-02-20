@@ -1,0 +1,283 @@
+# Centralized icon mapping
+# Usage: in project/skills YAML, just use the key name (e.g. "python")
+# Templates will look up skillicon, devicon, and fa_icon from here.
+#
+# Fields:
+#   label       - Display name
+#   skillicon   - Skill Icons ID (skillicons.dev)
+#   devicon     - Devicon ID (devicon.dev), omit if same as skillicon
+#   fa_icon     - Font Awesome fallback class (used when no skillicon/devicon)
+
+# === Languages ===
+javascript:
+  label: JavaScript
+  skillicon: js
+  devicon: javascript
+
+typescript:
+  label: TypeScript
+  skillicon: ts
+  devicon: typescript
+
+python:
+  label: Python
+  skillicon: py
+  devicon: python
+
+java:
+  label: Java
+  skillicon: java
+
+c:
+  label: C
+  skillicon: c
+
+cpp:
+  label: C++
+  skillicon: cpp
+  devicon: cplusplus
+
+html:
+  label: HTML5
+  skillicon: html
+  devicon: html5
+
+css:
+  label: CSS3
+  skillicon: css
+  devicon: css3
+
+mysql:
+  label: MySQL
+  skillicon: mysql
+
+bash:
+  label: Bash
+  skillicon: bash
+
+riscv:
+  label: RISC-V
+  fa_icon: fa-solid fa-microchip
+
+x86:
+  label: x86
+  fa_icon: fa-solid fa-microchip
+
+# === Frameworks & Libraries ===
+vue:
+  label: Vue.js
+  skillicon: vue
+  devicon: vuejs
+
+react:
+  label: React
+  skillicon: react
+
+nodejs:
+  label: Node.js
+  skillicon: nodejs
+
+d3:
+  label: D3.js
+  skillicon: d3
+  devicon: d3js
+
+pytorch:
+  label: PyTorch
+  skillicon: pytorch
+
+tensorflow:
+  label: TensorFlow
+  skillicon: tensorflow
+
+flask:
+  label: Flask
+  skillicon: flask
+
+express:
+  label: Express
+  skillicon: express
+
+jest:
+  label: Jest
+  skillicon: jest
+
+sass:
+  label: Sass
+  skillicon: sass
+
+tailwind:
+  label: Tailwind CSS
+  skillicon: tailwind
+  devicon: tailwindcss
+
+numpy:
+  label: NumPy
+  fa_icon: fa-solid fa-chart-bar
+
+pandas:
+  label: Pandas
+  fa_icon: fa-solid fa-table
+
+scipy:
+  label: SciPy
+  fa_icon: fa-solid fa-square-root-variable
+
+pytest:
+  label: Pytest
+  fa_icon: fa-solid fa-flask-vial
+
+opencv:
+  label: OpenCV
+  skillicon: opencv
+
+spring:
+  label: Spring Boot
+  skillicon: spring
+
+matplotlib:
+  label: Matplotlib
+  fa_icon: fa-solid fa-chart-line
+
+albumentations:
+  label: Albumentations
+  fa_icon: fa-solid fa-images
+
+sqlite:
+  label: SQLite
+  skillicon: sqlite
+
+vegalite:
+  label: Vega-Lite
+  fa_icon: fa-solid fa-chart-bar
+
+# === Developer Tools ===
+git:
+  label: Git
+  skillicon: git
+
+linux:
+  label: Linux
+  skillicon: linux
+
+docker:
+  label: Docker
+  skillicon: docker
+
+jenkins:
+  label: Jenkins
+  skillicon: jenkins
+
+nginx:
+  label: Nginx
+  skillicon: nginx
+
+figma:
+  label: Figma
+  skillicon: figma
+
+postman:
+  label: Postman
+  skillicon: postman
+
+vscode:
+  label: VS Code
+  skillicon: vscode
+  devicon: vscode
+
+latex:
+  label: LaTeX
+  skillicon: latex
+
+hadoop:
+  label: Hadoop
+  fa_icon: fa-solid fa-database
+
+jira:
+  label: Jira
+  fa_icon: fa-brands fa-jira
+
+confluence:
+  label: Confluence
+  fa_icon: fa-brands fa-confluence
+
+yapi:
+  label: YApi
+  fa_icon: fa-solid fa-code
+
+# === Domain / Concept Tags ===
+yolov8:
+  label: YOLOv8
+  fa_icon: fa-solid fa-eye
+
+yaml:
+  label: YAML
+  fa_icon: fa-solid fa-file-code
+
+tcp:
+  label: TCP
+  fa_icon: fa-solid fa-network-wired
+
+socket:
+  label: Socket
+  fa_icon: fa-solid fa-plug
+
+websocket:
+  label: WebSocket
+  fa_icon: fa-solid fa-plug
+
+json:
+  label: JSON
+  fa_icon: fa-solid fa-brackets-curly
+
+svg:
+  label: SVG
+  skillicon: svg
+
+hbase:
+  label: HBase
+  fa_icon: fa-solid fa-database
+
+verilog:
+  label: Verilog
+  fa_icon: fa-solid fa-memory
+
+digital_logic:
+  label: Digital Logic
+  fa_icon: fa-solid fa-diagram-project
+
+cnn:
+  label: Convolutional Neural Network
+  fa_icon: fa-solid fa-layer-group
+
+neural_network:
+  label: Neural Network
+  fa_icon: fa-solid fa-brain
+
+object_detection:
+  label: Object Detection
+  fa_icon: fa-solid fa-eye
+
+image_segmentation:
+  label: Image Segmentation
+  fa_icon: fa-solid fa-crop-simple
+
+stereo_vision:
+  label: Stereo Vision
+  fa_icon: fa-solid fa-binoculars
+
+rag:
+  label: RAG
+  fa_icon: fa-solid fa-magnifying-glass-chart
+
+prompt_engineering:
+  label: Prompt Engineering
+  fa_icon: fa-solid fa-terminal
+
+llm:
+  label: LLM
+  fa_icon: fa-solid fa-brain
+
+wandb:
+  label: W&B
+  fa_icon: fa-solid fa-chart-line

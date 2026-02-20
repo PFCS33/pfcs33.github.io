@@ -8,10 +8,6 @@ category: Work
 tag: Compiler
 selected: false
 tech:
-  - name: C
-    icon: c
-  - name: Java
-    icon: java
-  - name: RISC-V
-    fa_icon: fa-solid fa-microchip
+  - java
+  - riscv
 ---

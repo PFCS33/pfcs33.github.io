@@ -9,16 +9,10 @@ tag: Computer Vision
 selected: false
 redirect: https://github.com/PFCS33/epipolar-geometry-fundamental-matrix
 tech:
-  - name: Stereo Vision
-    fa_icon: fa-solid fa-binoculars
-  - name: Python
-    icon: py
-  - name: NumPy
-    fa_icon: fa-solid fa-chart-bar
-  - name: OpenCV
-    icon: opencv
-  - name: Matplotlib
-    fa_icon: fa-solid fa-chart-line
-  - name: Bash
-    icon: bash
+  - stereo_vision
+  - python
+  - numpy
+  - opencv
+  - matplotlib
+  - bash
 ---

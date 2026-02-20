@@ -9,14 +9,9 @@ tag: Image Processing
 selected: false
 redirect: https://github.com/PFCS33/poisson-image-blending
 tech:
-  - name: Python
-    icon: py
-  - name: NumPy
-    fa_icon: fa-solid fa-chart-bar
-  - name: SciPy
-    fa_icon: fa-solid fa-square-root-variable
-  - name: OpenCV
-    icon: opencv
-  - name: Matplotlib
-    fa_icon: fa-solid fa-chart-line
+  - python
+  - numpy
+  - scipy
+  - opencv
+  - matplotlib
 ---

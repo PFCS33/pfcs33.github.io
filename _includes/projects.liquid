@@ -25,18 +25,20 @@
       {% if project.tech %}
         <div class="project-tech">
           {% for t in project.tech %}
+            {% assign info = site.data.icons[t] %}
             <span class="tech-tag">
-              {% if t.icon %}
+              {% if info.skillicon %}
                 <img
                   class="tech-icon skill-icon-themed"
-                  src="https://skillicons.dev/icons?i={{ t.icon }}&theme=light"
-                  data-icon="{{ t.icon }}"
-                  alt="{{ t.name }}"
+                  src="https://skillicons.dev/icons?i={{ info.skillicon }}&theme=light"
+                  data-icon="{{ info.skillicon }}"
+                  alt="{{ info.label }}"
+                  onerror="if(typeof skillIconFallback==='function'){skillIconFallback(this);}else{this.onerror=null;this.style.display='none';}"
                 >
-              {% elsif t.fa_icon %}
-                <i class="{{ t.fa_icon }} tech-icon-fa"></i>
+              {% elsif info.fa_icon %}
+                <i class="{{ info.fa_icon }} tech-icon-fa"></i>
               {% endif %}
-              {{ t.name }}
+              {{ info.label }}
             </span>
           {% endfor %}
         </div>

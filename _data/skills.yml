@@ -1,89 +1,50 @@
 languages:
   title: Languages
   items:
-    - name: JavaScript
-      icon: js
-    - name: TypeScript
-      icon: ts
-    - name: Python
-      icon: py
-    - name: Java
-      icon: java
-    - name: C
-      icon: c
-    - name: C++
-      icon: cpp
-    - name: HTML5
-      icon: html
-    - name: CSS3
-      icon: css
-    - name: MySQL
-      icon: mysql
-    - name: Bash
-      icon: bash
-    - name: RISC-V
-      fa_icon: fa-solid fa-microchip
-    - name: x86
-      fa_icon: fa-solid fa-microchip
+    - javascript
+    - typescript
+    - python
+    - java
+    - c
+    - cpp
+    - html
+    - css
+    - mysql
+    - bash
+    - riscv
+    - x86
 
 frameworks:
   title: Frameworks & Libraries
   items:
-    - name: Vue.js
-      icon: vue
-    - name: React
-      icon: react
-    - name: Node.js
-      icon: nodejs
-    - name: D3.js
-      icon: d3
-    - name: PyTorch
-      icon: pytorch
-    - name: TensorFlow
-      icon: tensorflow
-    - name: Flask
-      icon: flask
-    - name: Express
-      icon: express
-    - name: Jest
-      icon: jest
-    - name: Sass
-      icon: sass
-    - name: Tailwind CSS
-      icon: tailwind
-    - name: NumPy
-      fa_icon: fa-solid fa-chart-bar
-    - name: Pandas
-      fa_icon: fa-solid fa-table
-    - name: Pytest
-      fa_icon: fa-solid fa-flask-vial
+    - vue
+    - react
+    - nodejs
+    - d3
+    - pytorch
+    - tensorflow
+    - flask
+    - express
+    - jest
+    - sass
+    - tailwind
+    - numpy
+    - pandas
+    - pytest
 
 tools:
   title: Developer Tools
   items:
-    - name: Git
-      icon: git
-    - name: Linux
-      icon: linux
-    - name: Docker
-      icon: docker
-    - name: Jenkins
-      icon: jenkins
-    - name: Nginx
-      icon: nginx
-    - name: Figma
-      icon: figma
-    - name: Postman
-      icon: postman
-    - name: VS Code
-      icon: vscode
-    - name: LaTeX
-      icon: latex
-    - name: Hadoop
-      fa_icon: fa-solid fa-database
-    - name: Jira
-      fa_icon: fa-brands fa-jira
-    - name: Confluence
-      fa_icon: fa-brands fa-confluence
-    - name: YApi
-      fa_icon: fa-solid fa-code
+    - git
+    - linux
+    - docker
+    - jenkins
+    - nginx
+    - figma
+    - postman
+    - vscode
+    - latex
+    - hadoop
+    - jira
+    - confluence
+    - yapi
