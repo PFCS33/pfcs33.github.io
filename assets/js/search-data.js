@@ -38,6 +38,11 @@ ninja.data = [{
           description: "Fundamental matrix estimation for stereo vision using the normalized 8-point algorithm and RANSAC.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/12_project/";
+            },},{id: "projects-resume-amp-cover-letter-latex-template",
+          title: 'Resume &amp;amp; Cover Letter LaTeX Template',
+          description: "A modular LaTeX template for job applications with shared header system, ATS-compatible formatting, and unified resume/cover letter styling.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/13_project/";
             },},{id: "projects-bingo-real-time-multi-item-waste-sorting-app",
           title: 'BinGo: Real-Time Multi-Item Waste Sorting App',
           description: "An Android app for real-time multi-item waste sorting with direct bin assignment output, supported by ML-based object detection model.",
